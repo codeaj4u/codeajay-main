@@ -28,6 +28,10 @@
         padding-bottom :80px;
     }
 
+    .active{
+        color :rgb(255,189,58);
+    }
+
 
 
 
@@ -133,11 +137,13 @@
 
 
                         <img  class="img-fluid" src="{{topblog.image.url}}" alt="{{topblog.title}}">
-
-
                         {% endif %}
 
+
                 </div>
+                    <p class="mt-3">
+                        <a href="{% url 'home' %}">Home</a> <span> >> </span><a class="active" href="/blog/{{topblog.slug}}">{{topblog.title}}</a>
+                    </p>
 
                 </div>
 
