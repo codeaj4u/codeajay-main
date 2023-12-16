@@ -1,0 +1,285 @@
+
+
+
+{% extends 'index.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+
+
+<meta charset="UTF-8">
+<title>{% block title %}{{topblog.title}}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{topblog.meta_decription}}{% endblock %}">
+<meta name="keywords" content="{% block keywords %}{{topblog.meta_keywords}}{% endblock %}">
+<meta name="author" content="{% block author %}{{topblog.author}}{% endblock %}">
+<link rel="canonical" href="{% block canonical %}https://codeajay.in/blog/{{topblog.slug}}{% endblock %}">
+
+
+<style>
+
+    .bbbb{
+        background :url({% static 'bb.png' %}) ;
+        background-position: top;
+        background-size:cover;
+        padding-top: 80px;
+        padding-bottom :80px;
+    }
+
+
+
+
+</style>
+
+
+
+
+
+
+    <section class="blog-main" id="blog-home">
+        <div class="container">
+
+            <h1 class="">{{topblog.title}}</h1>
+            
+            <div class="row ">
+                <div class="col-md-12 col-lg-6 col-sm-12 main-text">
+                    <div class="code-box">
+                        <h3 id="question"></h3>
+                        <br>
+                        <code class="code" id="code">
+                            
+                        </code>
+
+                    </div>
+                    
+
+
+
+                </div>
+
+                
+                <div class="col-md-12 col-lg-6 col-sm-12 main-image mt-3 ">
+
+                    <p>
+                        Know more about this
+                    </p>
+                    <!-- <i class="fa-solid fa-arrow-turn-down"></i> -->
+
+                    <div class="">
+                        <a href="#blog">
+                            <i class="fa-solid fa-arrow-down ffff"></i>
+                        </a>
+                        
+
+                    </div>
+                    
+
+                    <div class="booooox">
+                         
+
+                        <div class="weel" id="rotatingCircle">
+    
+                            <div class="center-circle"></div>
+                            <div class="numbers">
+                              <div class="number number-4">
+                                <i class="fa-brands fa-python"></i>
+                              </div>
+                              <div class="number number-6">
+                                <i class="fa-brands fa-java"></i>
+                              </div>
+                              <div class="number number-7">
+                                <i class="fa-brands fa-js"></i>
+                              </div>
+                              <div class="number number-8">
+                                <i class="fa-brands fa-android"></i>
+                              </div>
+                              <div class="number number-9">
+                                <i class="fa-brands fa-react"></i>
+                              </div>
+                              <div class="number number-10">
+                                <i class="fa-brands fa-html5"></i>
+                              </div>
+                              <div class="number number-11">
+                                <i class="fa-brands fa-css3-alt"></i>
+                              </div>
+                              <div class="number number-12">
+                                <i class="fa-brands fa-aws"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section class="blog" id="blog">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-9 col-md-12  ppost">
+
+
+                <div class="bbbb" style="">
+                    <div class="col-sm-12 col-lg-4 col-md-12 text-center">
+                        {% if  topblog.image != "" %}
+
+
+                        <img  class="img-fluid" src="{{topblog.image.url}}" >
+
+
+                        {% endif %}
+
+                </div>
+
+                </div>
+
+
+
+                <br><br>
+                    <div class="description">
+                        {{topblog.full_details | safe}}
+                    </div>
+
+
+<!--                <p>Python offers a membership test using the <code>in</code> operator to check if an element exists in a list.</p>-->
+<!--                -->
+<!--                <h2>Python Code Example</h2>-->
+<!--                <code>-->
+<!--                    colors = ["red", "blue", "green"]<br>-->
+<!--                    print("yellow" in colors)-->
+<!--                </code>-->
+<!--                -->
+<!--                <p>The above Python code snippet checks if the string <code>"yellow"</code> exists in the <code>colors</code> list.</p>-->
+<!--                -->
+<!--                <h2>Explanation</h2>-->
+<!--                <p>The output of the code will be <strong>False</strong> since <code>"yellow"</code> is not an element in the <code>colors</code> list (<code>["red", "blue", "green"]</code>).</p>-->
+<!--                -->
+<!--                <h2>Conclusion</h2>-->
+<!--                <p>Membership tests in Python, such as the <code>in</code> operator with lists, are essential for efficiently checking the presence of elements within lists.</p>-->
+<!--                <p>By understanding and utilizing membership tests, Python programmers can validate the existence of elements, enabling effective decision-making in their programs.</p>-->
+
+
+
+
+
+            </div>
+
+            <div class="col-sm-12 col-lg-3 col-md-12 sidebar">
+
+                <h3 class="mt-4">Latest Post</h3>
+                <br>
+                <div class="row">
+
+                    {% for blog in blogs %}
+
+                    {% if topblog.id != blog.id %}
+                    
+                    <div class="col-4 mb-3">
+
+                        {% if blog.image != "" %}
+
+                        <img src="{{blog.image.url}}" class="img-fluid immg">
+
+                        {% endif %}
+
+
+                    </div>
+
+                    <div class="col-8 mb-3 ">
+                        <p class="ttle"><a href="/blog/{{blog.slug}}">{{blog.title}}</a></p>
+                    </div>
+                    {% endif %}
+
+                    {% endfor %}
+
+
+
+                </div>
+                
+
+            </div>
+
+
+
+
+        </div>
+        
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+    function generate(text, elementId) {
+        var wordsArray = text.split(" ");
+        var i = 0;
+
+        function appendText() {
+            if (i < wordsArray.length) {
+                document.getElementById(elementId).innerHTML += wordsArray[i] + " ";
+                i++;
+                setTimeout(appendText, 300); // Adjust delay between words (e.g., 300 milliseconds)
+            }
+        }
+
+        appendText();
+    }
+
+    function generate1(text, elementId) {
+        var wordsArray = text.split("");
+        var i = 0;
+
+        function appendText() {
+            if (i < wordsArray.length) {
+                document.getElementById(elementId).innerHTML += wordsArray[i];
+                i++;
+                setTimeout(appendText, 100); // Adjust delay between characters (e.g., 100 milliseconds)
+            }
+        }
+
+        appendText();
+    }
+
+
+    let encodedString = "{{topblog.code}}".toString();
+    let div = document.createElement('div');
+    div.innerHTML = encodedString;
+    let code = div.innerText;
+
+
+
+    console.log(code)
+    generate(code, 'code');
+
+    var question = '{{topblog.question}}';
+    generate1(question, 'question');
+});
+
+</script>
+
+{% endblock %}
+
+

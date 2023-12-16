@@ -1,0 +1,2936 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}codeAj | Free College Major Projects | Affordable Software Development Services at CodeAjay{% endblock %}</title>
+
+    <meta name="description" content="{% block description %}Get a wide range of free college major projects and affordable software development services from CodeAjay. Get the best of both worlds today!{% endblock %}" />
+    <meta name="keywords" content="{% block keywords %}college major projects, free college major projects, affordable software development services, web development, mobile development, machine learning, software development,  web design, CodeAjay, codeaj{% endblock %}" />
+    <link rel="canonical" href="{% block canonical %}https://codeajay.in/{% endblock %}">
+
+
+
+
+
+    <link rel="icon" type="image/png" href="{% static 'fav.png' %}" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+    <style>
+
+
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="tel"]::-webkit-inner-spin-button,
+        input[type="tel"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0; /* Optional: Ensure alignment */
+        }
+
+        /* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Width of the entire scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:linear-gradient(#151515,black); /* Track (background) color */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffbd3a33; /* Thumb (scroll bar) color */
+     /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change color on hover */
+  }
+  
+  /* For Firefox */
+  /* Firefox allows you to style scroll bars using "scrollbar-color" and "scrollbar-width" */
+  /* The following example sets the color and width for both the thumb and the track */
+  * {
+        scrollbar-color: #888 #f1f1f1;
+        scrollbar-width: thin;
+    }
+    
+    
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            background-color: #000000;
+        }
+
+
+        a{
+            text-decoration: none!important ;
+            color: white;
+
+        }
+
+
+        .contact .con2 input{
+            background-color:rgba(255, 255, 255, 0.539);
+            /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
+
+        }
+        .contact .con2 textarea{
+            background-color:rgba(255, 255, 255, 0.539);
+            /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
+
+        }
+
+        .contact .con2 input:active{
+            background-color:rgb(255, 255, 255);
+        }
+
+        .contact .con2 textarea:active{
+            background-color:rgb(255, 255, 255);
+        }
+
+        .contact .con2 input:hover{
+            background-color:rgb(255, 255, 255);
+        }
+
+
+        .contact .con2 textarea:hover{
+            background-color:rgb(255, 255, 255);
+        }
+
+
+        .Navigation-bar{
+            color : white;
+            position: fixed;
+            width: 100%;
+            z-index: 99999;
+        
+        }
+        
+        .logo img{
+            width: 100px;
+        }
+        .menu{
+            display: none;
+        }
+
+        
+        #menu{
+            transition: all 0.5s ease;
+        }
+
+
+        .menu-text{
+            transition: ease-in-out;
+            transition-duration: 0.5s;
+        }
+
+
+        .menu-text ul img{
+            display:none;
+        }
+
+        .menu-text ul{
+            display: flex;
+        }
+
+        
+        .menu-text ul li {
+            list-style: none;
+            position: relative;
+            padding: 10px;
+            margin: 10px;
+            margin-top: 27px;
+          }
+          
+          .menu-text ul li::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparent; /* Set your desired underline color */
+            transform: scaleX(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease; /* Adjust the transition duration as needed */
+          }
+          
+          .menu-text ul li:hover::after {
+            transform: scaleX(1);
+            background-color: #FFBD3A;
+            
+          }
+          
+
+        .menu-text ul li:hover a{
+            color:#FFBD3A;
+        }
+
+
+        .main-text{
+
+            padding-top:100px;
+        }
+
+        .main-text p{
+            padding-top: 15px;
+            color:#d7d7d7;
+            font-size: 13px;
+        }
+
+        .main-text h1{
+            font-size: 50px;
+            text-transform: capitalize;
+            font-weight: 900;
+            color:white;
+           
+        }
+
+        .main-text span{
+            color:#FFBD3A;
+        }
+
+
+
+        .main{
+            background-color: #000000;
+            padding-top: 50px;
+           
+        }
+
+        .blog-main{
+            padding-bottom : 140px;
+            padding-top: 120px;
+
+        }
+
+
+
+
+        .button1{
+            background-color: #FFBD3A;
+            color: #000000;
+            border : 1px solid #FFBD3A;
+            padding: 10px;
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 30px;
+            transition:ease-in-out;
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover{
+            background-color: transparent;
+            border : 1px solid #1e1e1e;
+            color: white;
+        }
+
+        .button2{
+            background-color: transparent;
+            border : 1px solid #1e1e1e;
+            color: #ffffff;
+            padding: 10px;
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 30px;
+            transition:ease-in-out;
+            transition-duration: 0.5s;
+        }
+
+        .button2:hover{
+            border : 1px solid #FFBD3A;
+            background-color: #FFBD3A;
+            color:black;
+        }
+
+       
+
+
+        .main{
+            height:100vh;
+
+        }
+
+
+        .about{
+            background-color:#000000;
+            z-index: 9999;
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+
+        
+
+        .head-text{
+            font-family:'Bebas Neue', Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .head-text .text{
+            color: white;
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 30px;
+        }
+
+        .head-text .shadow{
+            color: white;
+            letter-spacing: 3px;
+            font-size: 55px;
+            font-weight: 900;
+            opacity: 0.15;
+            position: relative;
+            top : -45px;
+        }
+
+
+        
+
+        .head-text .decription{
+            color: white;
+            font-size: 13px;
+            position: relative;
+            top : -35px;
+            color: #828282;
+        }
+
+        .about-text{
+            padding-left: 20%;
+            color: #828282;
+        }
+
+        .about-text .bold-about{
+            font-weight: 500;
+            color :white;
+        }
+
+        .about-text span{
+            color: #FFBD3A;
+            font-weight: 700;
+        }
+
+        .about-text p{
+            color: white;
+            font-size: 19px;
+        }
+
+        .about-text div {
+            padding: 3px;
+        }
+
+        
+
+        .services{
+            background-color: #000000;
+        }
+
+        /*.cardd{
+            padding: 30px;
+            background-color: #222222;
+            margin: 10px;
+            border: none;
+            border-radius : 0px;
+
+        }*/
+
+        .cardd{
+            background-color: #222222;
+            border: none;
+            border-radius : 0px;
+            height:150px;
+            position: relative;
+        }
+
+       .carddd{
+        position: relative;
+        top:140px;
+        z-index: 99;
+       }
+
+        
+
+
+
+        .carddd i{
+            font-size: 40px;
+            color: #FFBD3A;
+            padding: 20px;
+            
+        }
+
+        .carddd:hover i{
+            transition: all 0.4s ease-in-out;
+        }
+
+
+
+        .carddd  p{
+            color: white;
+
+        }
+
+
+        .carddd p{
+            list-style: none;
+            position: relative;
+            padding-bottom: 5px;
+
+            
+          }
+          
+          .carddd p:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: transparent;
+            transform: scaleX(0.3);
+            transform-origin: bottom;
+            text-align:center;
+            left:35%;
+            width:30%;
+            transition: transform 0.3s ease;
+          }
+          
+          .carddd p:hover::after{
+            transform: scaleX(1);
+            background-color: #FFBD3A;
+            
+          }
+          
+
+          .carddd p:hover a{
+            color:rgb(255, 189, 58);
+        }
+
+
+        .bb:hover .cardd{
+            animation: boxstyle 1s;
+
+        }
+
+        .boxxxxx{
+            position: relative;
+            top: -100px;
+        }
+
+        @keyframes boxstyle {
+            0% {
+                background-color: #1e1e1e;
+                clip-path: circle(15.0% at 1% 100%);
+            }
+           
+            100% {
+                background-color: #1e1e1e;
+                clip-path: circle(140.4% at 1% 100%);
+            }
+          }
+
+
+
+        .whychooseme{
+            background-color: rgb(20,20,20);
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+            padding-bottom: 150px;
+            padding-top: 70px;
+        }
+
+
+            
+
+
+        .ourproject{
+
+
+        }
+
+        .ourproject .container1{
+            border-left: 5px solid rgba(255, 189, 58, 0.3) ;
+            border-right: 5px solid rgba(255, 189, 58, 0.3) ;
+            margin : 50px;
+        }
+    
+    
+            .ourproject .right-card {
+                height : 200px;
+                margin-bottom: 20px;
+                border-radius: 0px;
+                border:none;
+                position: relative;
+                left: 50px;
+                box-shadow: rgba(255, 189, 58, 0.1) 0px 8px 24px, rgba(255, 189, 58, 0.1) 0px 16px 56px, rgba(255, 189, 58, 0.1) 0px 24px 80px;
+            }
+
+         
+
+            .ourproject .left-card {
+                height : 200px;
+                margin-bottom: 20px;
+                border-radius: 0px;
+                border:none;
+                position: relative;
+                left: -50px;
+                box-shadow: rgba(255, 189, 58, 0.1) 0px 8px 24px, rgba(255, 189, 58, 0.1) 0px 16px 56px, rgba(255, 189, 58, 0.1) 0px 24px 80px;
+            }
+
+
+
+
+    
+            .ourproject  img{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: ease-in-out ;
+                transition-duration: 0.3s;
+                
+            }
+            
+    
+    
+            .ourproject .card .img1{
+                height : 200px;
+                margin: 0;
+                position: absolute; 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: ease-in-out ;
+                transition-duration: 0.3s;
+
+            }
+    
+    
+           /* .ourproject  img:hover{            
+                height : 300px;
+            } */
+    
+            .ourproject  .project-detail{
+                width: 100%;
+                padding: 10px;
+                padding-top: 30px;
+                transition: ease-in-out ;
+                transition-duration: 0.3s;
+                height: 100%;
+                background-color: #000000;
+            }
+    
+            .ourproject  .project-detail h2{
+                color:#d7d7d7;
+                font-size: 25px;
+            }
+    
+            .ourproject  .project-detail p{
+                color:#a3a3a3;
+                font-size: 13px;
+            }
+    
+            .ourblog{
+                background-color:#000d1c;
+                padding-top: 50px;;
+                padding-bottom: 150px; 
+                clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+            }
+    
+    
+            .ourblog .card{
+                background-color: #141414;
+                
+            }
+    
+            .ourblog .texttt{
+                padding: 20px;
+                padding-top: 5px;
+            }
+          
+    
+            .ourblog .texttt h5{
+                padding-bottom: 10px;
+                font-weight: 500;
+            }
+    
+            .ourblog .texttt p{
+                color:#969696;
+                font-size: 14px;
+            }
+    
+            .ourblog .texttt .date{
+                color:#FFBD3A;
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+
+            .contact{
+
+                background-color:gray;
+
+
+            }
+
+            .contact .boo .bo{
+                padding: 30px;
+                margin: 10px;
+                font-size:27px ;
+                color:#FFBD3A;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                width: 40px;
+                position: relative;
+                left:35%;
+                background-color: #1e1e1e;
+                border-radius: 10px;
+
+            }
+
+
+            .contact  .boo:hover .bo{
+                animation: buttonScale 1s ;
+            }
+
+            .contact  i{
+                position: relative;
+                top: -53px;
+                font-size:27px;
+                color:#FFBD3A;
+               
+                
+            }
+
+
+            @keyframes buttonScale {
+                0% {
+                    background-color: #1e1e1e;
+                    clip-path: circle(15.0% at 1% 100%);
+                }
+               
+                100% {
+                    background-color: #1e1e1e;
+                    clip-path: circle(140.4% at 1% 100%);
+                }
+              }
+
+
+
+
+
+
+            .contact h5{
+                color: white;
+                padding: 5px;
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .contact p{
+                color:#a1a1a1;
+            }
+
+            .footer p{
+                color: #a1a1a1;
+                font-size: 13px;
+            }
+
+            .footer h3{
+                color : white;
+
+            }
+
+            .footer li{
+                color: #a1a1a1;
+                list-style:square;
+                padding-bottom:10px;
+
+            }
+
+
+            .footer i{
+                color:#FFBD3A;
+                font-size: 20px;
+            }
+            
+            
+            .footer div{
+                color: #a1a1a1;
+            }
+
+            .social-icon{
+                padding: 20px;
+            }
+
+            .social-icon i{
+                padding: 15px;
+                background-color:#222222;
+                font-size: 20px;
+                border-radius: 50%;
+                color: #FFBD3A;
+            }
+
+
+            .whatapp-text{
+                display: block;
+            }
+
+            .whatapppopup{
+                bottom :20%;
+                background-color:#222222;
+                position:fixed;
+                z-index: 9999999999;
+                padding: 20px;
+                width: 30px;
+                height: 150px;
+                opacity: 0.4;
+                transition: ease-in-out;
+                transition: 0.5s;
+            }
+
+            .whatapppopup:hover{
+                opacity: 1;
+            }
+
+            .whatapppopup p{
+                color: #ffffff;
+                display: block;
+                transform: rotate(90deg);
+                position: relative;
+                
+            }
+
+
+
+            .whatapppopup i{
+                font-size: 20px;
+                color:#06a800;
+                position: relative;
+                left:-8px;
+                animation: jump 1s infinite;
+            }
+    
+            @keyframes jump {
+    
+                0%{
+                    transform:scale(1)
+                }
+    
+                50%{
+                    transform: scale(1.1)
+                }
+    
+                100%{
+                    transform:scale(1) ;
+                    
+                }
+                
+            }
+
+
+
+            .popup{
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                background-color: rgba(0,0,0,.8);
+                z-index: 9999999999999999999999999;
+                display: none;
+            }
+    
+            .popup .popupbox{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.813);
+                background:linear-gradient(rgb(72, 72, 72),rgb(36, 36, 36));
+                border-radius: 10px;
+                overflow: hidden;
+
+                animation: boxxxxx 3s;
+
+            }
+
+            @keyframes boxxxxx {
+                0% {
+                    clip-path: circle(1% at 50% 50%);
+                }
+               
+                100% {
+                    clip-path: circle(70.7% at 50% 50%);
+                }
+              }
+
+
+
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+
+
+            .popup .popupbox{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 85%;
+                height:70%;
+              
+            }
+
+            .popup img{
+                position: absolute;
+                opacity: 0.2;
+                z-index: -1;
+                
+            }
+
+            .popupcontents input{
+                background-color: transparent;
+                border-radius: 30px;
+            
+            }
+            
+
+
+
+
+
+            .ourproject  img{
+                height: 200px;
+                width: 100%;
+            }
+
+            .ourproject .right-card {
+                left: 10px;
+            }
+            .ourproject .left-card {
+                left: -10px;
+            }
+
+            .contact .boo .bo{
+                left:41%;
+            }
+
+            .ourproject .container1{
+                margin : 0px;
+            }
+
+            
+            .whychooseme {
+            
+                clip-path: polygon(79% 4%, 99% 10%, 117% 19%, 100% 100%, 25% 95%, -19% 89%, 0 78%, 0 0, 38% 1%);
+            }
+
+            .ourblog .card{
+                margin : 0px;
+            }
+
+            .boxxx{
+                padding: 50px;
+            }
+
+            .boxxx h4{
+
+                height: 20px;
+                
+            }
+
+            .boxxx p{
+                height: 50px;
+            }
+            
+
+            .main{
+                padding-top: 0px;
+                padding-bottom: 20px;
+                height:auto;
+
+            }
+
+            .main-text p{
+                padding-top:10px ;
+                color:#d0d0d0;
+            }
+
+            #mobile-menu{
+                display:none;
+            }
+
+            .logo img{
+                width: 100px;
+               
+            }
+
+            .menu{
+                display: block;
+                font-size: 35px;
+                position: absolute;
+                right: 40px;
+                top: 30px;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+            .menu1{
+                display: block;
+                font-size: 40px;
+                position: absolute;
+                right: 40px;
+                top: 30px;
+                z-index:99;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+
+            .menu-text{
+                position: fixed;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #00000090;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+            .menu-text{
+                transition: ease-in-out;
+                transition-duration: 0.5s;
+            }
+
+
+            .menu-text ul::-webkit-scrollbar {
+                    display: none;
+                }
+              
+              /* Hide scrollbar for IE, Edge and Firefox */
+              .menu-text ul{
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+              }
+
+
+
+
+            .menu-text ul{
+                display: list-item;
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: #222222 ;
+                text-align: left;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+            .menu-text ul img{
+                width: 200px;
+                display: block;
+            }
+
+
+            .menu-text ul li{
+                padding-left: 40px;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius:20px ;
+                transition: ease-in-out;
+                list-style: none;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+           
+            .menu-text ul li:hover{
+                background-color: #FFBD3A;
+            }
+ 
+            .menu-text ul li:hover a{
+                color: black;
+
+            }
+           
+
+ 
+
+        }
+
+
+        .freelancer{
+            background : url('{% static "bg5.jpg" %}');
+            background-position: center;
+            background-size: cover;
+            
+
+            
+        }
+
+        .freelancer .card{
+            background-color: #141414;
+            position: relative;
+            top:-70px;
+            padding: 20px;
+            border: none;
+            border-radius: 0px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+
+        .freelancer .card h2{
+            color:#FFBD3A;
+
+        }
+
+        .freelancer .text h2{
+            color: #d0d0d0;
+            font-weight: 700;
+        }
+
+        .freelancer .text span{
+            color:#FFBD3A;
+        }
+
+        .freelancer .text p{
+            color:#c5c5c5;
+        }
+
+
+        .freelancer .card h2{
+            color:#FFBD3A;
+            font-weight: 700;
+        }
+
+        .freelancer .card p{
+            color: rgb(158, 158, 158);
+        }
+        
+
+        .contact{
+
+            background-color: #000000;
+            position:relative;
+
+
+        }
+
+        .contact .con1{
+            background-color: #222222;
+            overflow:hidden;
+            /*clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);*/
+        }
+
+        .contact .con1 img{
+            width: 100%;
+            height:auto;
+            transform: scale(1.2);
+            
+        }
+
+
+
+
+        .contact .con2{
+            background-color: #55555580;
+            /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
+
+        }
+
+       
+
+        .contact .con2 h4{
+            color:white;
+        }
+
+        .footer{
+            background-color: #000000;
+        }
+
+        .contact p{
+            color : white;
+        }
+
+
+        .about-text .f{
+            background-color:#FFBD3A;
+            color:white;
+            padding: 5px;
+            margin-bottom:15px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .about-text .s{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color:rgba(255, 189, 56, 0.100);
+            color:white;
+            padding: 5px;
+            margin-bottom:15px;
+            transition: ease;
+            transition-duration: 0.4s;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+            padding-left: 30px;
+
+        }
+
+
+        .about-text .s:hover{
+            background-color: rgba(255, 189, 56, 0.400);
+
+        }
+
+
+        
+
+        .boxxx{
+            border : 1px solid rgb(71, 71, 71);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: ease-in-out;
+            transition-duration: 0.3s;
+        }
+
+        .boxxx h4{
+
+            color: white;
+            height: 50px;
+            transition: ease-in-out;
+            transition-duration: 0.3s;
+            
+        }
+
+    
+
+
+
+        .boxxx p{
+            color: #9a9a9a;
+            font-size: 13px;
+            height: 7 px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;
+            transition: ease-in-out;
+            transition-duration: 0.3s;  
+        }
+
+
+
+        .boxxx i{
+            font-size: 40px;
+            padding-bottom: 20px;
+            color: #FFBD3A;
+            transition: ease-in-out;
+            transition-duration: 0.3s;
+            
+        }
+
+        .boxxx:hover a{
+            color: #FFBD3A;
+        }
+
+            
+        
+        .boxxx p::-webkit-scrollbar {
+            display: none;
+        }
+        
+
+        
+
+        .boxxx:hover{
+            background-color:black;
+            border: #000000 1px solid;
+        }
+        .boxxx:hover h4{
+            color:#FFBD3A;
+        }
+        .boxxx:hover p{
+            color: white;
+        }
+
+        .boxxx:hover i{
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+
+        .copyright{
+            background: linear-gradient(to right, #ffbd3a72,#000000);
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
+        }
+
+        .button2{
+            padding: 10px;
+            background-color:#555;
+            color : black;
+            border-radius: 0px;
+            
+        }
+
+
+
+        .setting{
+
+            position:fixed;
+            left: 0px;
+            bottom: 50%;
+            background-color: #1e1e1e;
+            padding: 10px;
+            opacity: 0.3;
+            z-index: 99;
+            transition: ease-in;
+            transition-duration: 0.5s;
+
+        }
+
+        .setting i{
+            color: white;
+            font-size: 25px;
+            animation: setting-rotate 5s infinite ;
+            
+        }
+
+
+        .setting:hover i{
+            animation: setting-rotate 1s infinite ;
+            color: #FFBD3A;
+            
+        }
+        .setting:hover{
+            opacity: 1;
+        }
+
+        @keyframes  setting-rotate{
+
+            0%{
+                transform: rotate(360deg);
+            }
+            
+            
+        }
+
+
+        .social-media{
+            z-index: 999;
+            position: fixed;
+            width: 290px;
+            padding: 10px;
+            border : 1px solid gray;
+            left: -290px;
+            top: 35%;
+            text-align: center;
+            transition: ease-in;
+            transition-duration: 0.5s;
+            background-color: #000000;
+        }
+
+        .social-media i{
+            margin-bottom: 10px;
+        }
+
+        a:hover{
+            color :white;
+        }
+
+        .close{
+            color:white;
+            position: absolute;
+            right: 30px;
+            top:20px;
+            font-weight: 800;
+            font-size: 20px;
+            transition:ease-in-out;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .close:hover{
+            color:#FFBD3A;
+        }
+
+        .popupcontents{
+          
+        }
+        .popupcontents h3{
+            color: white;
+        }
+
+        .popupcontents p{
+            color:rgb(255, 255, 255);
+            font-size: 13px;
+        }
+
+
+        .popupcontents input{
+            background-color: transparent;
+            border-radius: 30px;
+            
+            
+        }
+
+        .popupcontents input:focus{
+            background-color: transparent;
+            box-shadow: none;
+            color: #d4d4d4;
+            border-color: #FFBD3A;
+
+        }
+
+        .popupcontents button{
+           
+            padding: 6px;
+            border: none;
+            font-weight: 700;
+            color : rgb(42, 42, 42);
+            border-radius: 30px;
+            padding-left: 10px;
+            padding-right:10px ;
+
+        }
+
+        .popupcontents button:hover{
+            background: #FFBD3A;
+        }
+
+        .leftpopupbox{
+            
+        }
+
+        .rightpopupbox{
+            padding: 30px;
+        }
+
+        .rightpopupbox h3{
+            font-weight: 400;
+            
+        
+        }
+
+        .rightpopupbox span{
+            font-weight: 700;
+            font-size: 35px;
+            color: #FFBD3A;
+        }
+
+        .smmm{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+
+        }
+
+        .smmm i{
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .weel {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            animation: rotateCircle 50s linear infinite;
+            background-color: rgba(255, 189, 58, 0.56);
+            box-shadow: rgba(255, 189, 58, 0.1) 0px 8px 24px, rgba(255, 189, 58, 0.1) 0px 16px 56px, rgba(255, 189, 58, 0.1) 0px 24px 80px;
+            box-shadow: rgba(255, 189, 58, 0.56) 0px 0px 200px 50px;
+            z-index: -1;
+            
+          }
+          .weel:hover{
+            animation: none;
+          }
+    
+          
+          
+          @keyframes rotateCircle {
+            from {
+              transform: rotate(360deg);
+            }
+            to {
+              transform: rotate(0deg);
+            }
+          }
+    
+          
+           
+         
+          
+          .numbers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none;
+          }
+          
+          .number {
+            position: absolute;
+            font-size: 14px;
+            color: #333;
+          }
+          
+       
+          .number-4 {
+            bottom: 0%;
+            left: 95%;
+          }
+          
+       
+          
+          .number-6 {
+            bottom: -20%;
+            right: 50%;
+            transform: translateX(50%);
+          }
+          
+          .number-7 {
+            bottom: 0%;
+            right: 95%;
+          }
+          
+          .number-8 {
+            top: 50%;
+            left: -22%;
+            transform: translate(0, -50%);
+          }
+          
+          .number-9 {
+            top: 5%;
+            left: -8%;
+          }
+          
+          .number-10 {
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          .number-11 {
+            top: 5%;
+            right: -6%;
+          }
+          
+          .number-12 {
+            top: 50%;
+            left: 110%;
+            transform: translate(0, -50%);
+          }
+    
+          .weel i{
+            font-size: 35px;
+            color: #FFBD3A;
+          }
+
+
+        .booooox{
+            position: fixed;
+            top:25%;
+            left:80%
+
+        }
+
+
+
+        .blog-main{
+            background-color: #000000;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+        .code-box{
+            background-color:#2121218e;
+            border: 1px solid rgb(72, 72, 72);
+            padding: 50px;
+            border-radius: 20px;
+
+            height:auto;
+
+        }
+
+        .code-box code{
+            color :rgb(136, 136, 136);
+        }
+        .code-box h3{
+            color:#FFBD3A;
+        }
+
+        .main-text{
+            padding-top: 30px;
+        }
+
+        .blog-main h1{
+            color:#878787;
+            width: 70%;
+        }
+
+
+        .main-image p{
+            margin-top : 18vh;
+            margin-left: 15%;
+            font-weight: 700;
+            font-size: 18px;
+            color:#555;
+
+        }
+        .main-image .ffff{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 40px;
+            margin-left: 25% ;
+            animation: jump 1s ease infinite;
+            color: #a1a1a1;
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        @keyframes jump {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+
+          .main-image .ffff:hover{
+            animation: none;
+            color :#FFBD3A;
+            transition: 1s;
+
+
+
+        }
+
+        .ppost{
+
+
+            color : rgb(179, 179, 179);
+
+        }
+
+
+
+        .blog{
+            background-color: #151515;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+            padding-bottom : 100px;
+
+
+        }
+
+
+
+
+        h2{
+            color: #ffffff;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+
+
+        .sidebar{
+
+            background-image: linear-gradient(to right, rgb(26, 26, 26), #151515);
+            height: auto;
+            padding-top: 80px;
+            padding-bottom:140px ;
+            position:sticky;
+        }
+
+
+
+        code{
+            color :#FFBD3A;
+        }
+
+        .immg{
+            border-radius: 5px;
+        }
+
+        .ttle{
+            color :#888888;
+            font-size: 15px;
+        }
+
+        .ttle:hover{
+            color: #FFBD3A;
+            transition: ease-in-out;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .sidebar h3{
+            color: white;
+        }
+
+
+
+
+        @media only screen and (max-width: 600px) {
+
+            .blog-main h1{
+                margin-top : 0px;
+                width: 100%;
+            }
+
+            .main-image p{
+                text-align: center;
+                display: none;
+            }
+
+
+            .main-image .ffff{
+             display: none;
+            }
+
+
+
+        }
+
+#loading{
+
+    display : none;
+
+}
+
+a:hover{
+    color: #FFBD3A;
+
+}
+
+
+        
+
+
+        
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+
+
+<body>
+    <div class="popup" id="popup">
+        <div class="popupbox popupcontents">
+            <p class="close" id="close">X</p>
+                <div class="row">
+                    
+                    <div class="col-sm-12 col-lg-5 col-md-5 leftpopupbox">
+                        <img src="{% static  'popup.png' %}" width="300">
+
+                    </div>
+                    <div class="col-sm-12 col-lg-7 col-md-7 rightpopupbox">
+                       
+                        <h3>
+                            Efficiently turn your<br> <span>Idea</span> into <span style="padding-left: 80px;">Reality</span> with minimal service <span>costs</span>.
+                        </h3>
+                        <br>
+                        <!-- <input class="form-control mb-3" type="text" placeholder="YourName"> -->
+                        <input class="form-control mb-3" id="phoneno" type="number" placeholder="PhoneNumber">
+                        <!-- <input class="form-control mb-3" type="email" placeholder="YourEmail"> -->
+                        <div class="" id="loading">
+                            <img src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif" width="130px">
+                        </div>
+                        <p id="thankyou"></p>
+
+                        <button id="popupsubmit">Submit</button>
+
+                        <div class="smmm">
+
+                            <div class="col-4">
+                                <a href="https://wa.me/918603862290" class="col-md-4 col-sm-4"><i class="fa-brands fa-whatsapp" style="color:rgb(62,189,80)"></i></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.facebook.com/c0deajay/" class="col-md-4 col-sm-4 "><i class="fa-brands fa-square-facebook" style="color:rgb(23,115,234)"></i></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.instagram.com/code_ajay/" class="col-md-4 col-sm-4 "><i class="fa-brands fa-instagram" style="color : #E1306C;"></i></a>
+                            </div>
+                         
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+
+
+
+    <div class="social-media">
+        <div class="row">
+            <div class="col-4">
+                <a href="https://www.facebook.com/c0deajay/" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+            <div class="col-4">
+                <a href="https://www.instagram.com/code_ajay/" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="col-4">
+                <a href="https://twitter.com/c0deaj" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+
+            <div class="col-4">
+                <a href="https://www.linkedin.com/in/codeaj/" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="col-4">
+                <a href="https://github.com/ajayoneness" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="col-4">
+                <a href="https://rastudio.pythonanywhere.com/" class="col-md-4 col-sm-4 social-icon fb"><i class="fa-solid fa-earth-asia"></i></a>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="setting" id="setting">
+        <i class="fa-solid fa-gear setting-icon" ></i>
+        
+    </div>
+
+    
+
+
+
+
+
+    
+
+    <section class="whatapppopup">
+
+    
+        <a href="https://wa.me/918603862290">
+            <i  class="fa-brands fa-whatsapp"></i>
+            <p class="whatapp-text">Whatapp</p>
+        </a>
+        
+    </section>
+
+
+
+    <section class="Navigation-bar" id="navbar" >
+
+        <div class="effect">
+
+            <div class="e1"></div>
+            <div class="e2"></div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col logo">
+
+                    <a href="{% url 'home' %}">
+                        <img class="img-fluid" src="{% static 'logo.png' %}">
+                    </a>
+
+                    <i class="fa-solid fa-bars menu " id="menu" ></i>
+                    <i class="fa-solid fa-xmark menu1 " id="close-menu"></i>
+                </div>
+
+                <div class="col menu-text" id="mobile-menu" >
+                    <ul>
+                        <img class="img-fluid" src="{% static 'logo.png' %}">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="/blog/{{blogs.0.slug}}">Blog</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#service">Service</a></li>
+                        <li><a href="/#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    {% block content %}
+
+
+    <section class="main" id="home">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12 col-lg-6 col-sm-12 main-text">
+                    <h1 class="">
+                        I'm 
+                        <span>
+                            
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10000" id="myCarousel">
+                              
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    Web Developer
+                                  </div>
+
+                                  <div class="carousel-item">
+                                    Mobile Developer
+                                  </div>
+
+                                  <div class="carousel-item">
+                                   Designer
+                                  </div>
+
+                                  <div class="carousel-item">
+                                    AI/ML Developer
+                                  </div>
+
+                                </div>
+                              </div>
+
+                        </span>
+                        
+                    </h1>
+
+                    <p>
+                        I am a dedicated and passionate Full Stack Developer with extensive expertise in Python Django and a flair for building innovative solutions. My journey in software development has led me to excel not only in Django but also as a proficient Flutter Mobile App Developer. 
+                    </p>
+
+                    <p>
+                        My commitment to staying up-to-date with the latest trends in technology and my ability to tackle complex challenges make me a valuable asset to any project. I thrive in collaborative environments, and my goal is to leverage my skills to create next-generation solutions that deliver outstanding user experiences.
+                    </p>
+
+
+                    <br><br>
+<!--                    <a href="#" class="button1" >Hire Me</a>-->
+                    <a href="#portfolio" class="button2" >My Work</a>
+
+                </div>
+
+                
+                <div class="col-md-12 col-lg-6 col-sm-12 main-image mt-3 ">
+                    <div class="booooox">
+                        <!-- <img class="img-fluid" src="/aj.jpg"> -->
+
+                        <div class="weel" id="rotatingCircle">
+    
+                            <div class="center-circle"></div>
+                            <div class="numbers">
+                              <div class="number number-4">
+                                <i class="fa-brands fa-python"></i>
+                              </div>
+                              <div class="number number-6">
+                                <i class="fa-brands fa-java"></i>
+                              </div>
+                              <div class="number number-7">
+                                <i class="fa-brands fa-js"></i>
+                              </div>
+                              <div class="number number-8">
+                                <i class="fa-brands fa-android"></i>
+                              </div>
+                              <div class="number number-9">
+                                <i class="fa-brands fa-react"></i>
+                              </div>
+                              <div class="number number-10">
+                                <i class="fa-brands fa-html5"></i>
+                              </div>
+                              <div class="number number-11">
+                                <i class="fa-brands fa-css3-alt"></i>
+                              </div>
+                              <div class="number number-12">
+                                <i class="fa-brands fa-aws"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="about  pb-5" id="about">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-6 col-sm-12 mt-5">
+                    <br><br>
+                    <a href="https://www.linkedin.com/in/codeaj/">
+                        <img src="{% static 'linkedin1.jpg' %}" class="img-fluid " style="margin-top: 130px;">
+                    </a> 
+
+                    <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="codeaj" data-version="v1">
+                        <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/codeaj?trk=profile-badge"></a>
+                    </div> -->
+                   
+                </div>
+
+                <div class="col-md-12 col-lg-6 col-sm-12">
+
+                    <br><br><br><br><br><br><br><br>
+
+                    <div class="head-text">
+                        <h3 class="text">About Me</h3>
+                        <h2 class="shadow">About</h2>
+                        <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+                    </div>
+
+                    
+
+                    <div class="row about-text">
+                        <div class="col-4 bold-about f">Name </div>
+                        <div class="col-6 s">Ajay Pandit</div>
+
+                        <div class="col-4 bold-about f">Date of birth </div>
+                        <div class="col-6 s">May 07 1998</div>
+
+                        <div class="col-4 bold-about f">Address </div>
+                        <div class="col-6 s"><a href="https://maps.app.goo.gl/uQ3QgWS4AJR6vYMBA">Bangalore</a> </div>
+
+                        <div class="col-4 bold-about f">Zip Code </div>
+                        <div class="col-6 s">560066</div>
+
+                        <div class="col-4  bold-about f">Email </div>
+                        <div class="col-6 s">
+                            <a href="mailto:codeaj4u@gmail.com">codeaj4u@gmail.com</a></div>
+
+                        <div class="col-4 bold-about f">Phone </div>
+                        <div class="col-6 s"><a href="tel:918603862290">+91 8603862290</a></div>
+
+                        <br><br>
+                        <p><span>53</span> Project complete</p>
+                    </div>
+
+
+                    <img src="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="services pt-5" id="service">
+        <div class="container">
+
+            <div class="head-text">
+                <h3 class="text">Services</h3>
+                <h2 class="shadow">Services</h2>
+                <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+    
+            </div>
+
+            <div class="row boxxxxx">
+
+                <div class="col-md-6 col-sm-12 col-lg-4 bb">
+
+                    <div class="carddd  text-center ">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <p>Web Developer</p>
+                    </div>
+
+                    <div class="card cardd "></div>
+
+                    
+                </div>
+
+
+                <div class="col-md-6 col-sm-12 col-lg-4 bb">
+
+                    <div class="carddd  text-center">
+                        <i class="fa-solid fa-robot"></i>
+                        <p>AI/ML</p>
+                    </div>
+
+                    <div class="card cardd ">
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 col-lg-4 bb">
+                    <div class="carddd text-center">
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <p>App Developer</p>
+                    </div>
+
+                    <div class="card cardd ">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="whychooseme">
+
+        <div class="container">
+
+            <div class="head-text">
+                <h3 class="text">Why Me</h3>
+                <h2 class="shadow">Why Me</h2>
+                <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+    
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-3 boxxx">
+                    <h4>
+                        Profressional and Dedicated Team
+                    </h4>
+    
+                    <p>
+                       Building architectures with modern technology
+                    </p>
+    
+                    <i class="fa-solid fa-users-viewfinder"></i>
+    
+                    <br>
+                    <a href="#">More</a>
+    
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-lg-3 boxxx">
+                    <h4>
+                        Unique Design
+                    </h4>
+              
+                    <p>
+                        Bring the beautifully for your house, Just enjoy!
+                    </p>
+    
+                    <i class="fa-solid fa-compass-drafting"></i>
+    
+                    <br>
+                    <a href="#">More</a>
+    
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-lg-3 boxxx">
+                    <h4>
+                        Affordable and Flexiable
+                    </h4>
+    
+                    <p>
+                        Bring nature in your house. Health is important
+                    </p>
+    
+                    <i class="fa-solid fa-credit-card"></i>
+    
+                    <br>
+                    <a href="#">More</a>
+    
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-lg-3 boxxx">
+                    <h4>
+                        24/7 Support
+                    </h4>
+    
+                    <p>
+                        Consulting Solutions and make plan to renovation
+                    </p>
+    
+                    <i class="fa-regular fa-clock"></i>
+    
+                    <br>
+                    <a href="#">More</a>
+    
+                </div>
+
+
+
+
+            </div>
+    
+
+        </div>
+
+  
+    </section>
+
+
+
+    <section class="ourproject pt-5 pb-5" id="portfolio">
+
+        <div class="container">
+        <div class="container1">
+
+            <div class="head-text">
+                <h3 class="text">Our Projects</h3>
+                <h2 class="shadow">Projects</h2>
+                <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+    
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12 col-lg-6">
+                    
+                        <div class="project-detail">
+                            <a href="#" >
+                            <h2>PlayHere Quiz</h2>
+                            <p>
+                                Use the margin property to make sure that the  element is center aligned according to its parent element.Use the margin property to make sure that the element is center aligned according to its parent element.
+                            </p>
+                            </a>
+
+                        </div> 
+                </div>
+
+
+                <div class="col-md-6 col-sm-12 col-lg-6">
+                    <div class="right-card">
+
+                        <img class="img-fluid img1" src="{% static 'playhere.jpg' %}">
+                        
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-12 col-lg-6">
+                    <div class="left-card">
+
+                        <img class="img-fluid img1" src="{% static 'kalyan.jpg' %}">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 col-lg-6">
+                
+                    <div class="project-detail">
+                        <a href="#" >
+                        <h2>Kalyan Hospital</h2>
+                            <p>
+                                Use the margin property to make sure that the  element is center aligned according to its parent element.Use the margin property to make sure that the element is center aligned according to its parent element.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6 col-sm-12 col-lg-6">
+                    
+                    <div class="project-detail">
+                        <a href="#" >
+                        <h2>Emotion is Every Thing</h2>
+                        <p>
+                            Use the margin property to make sure that the  element is center aligned according to its parent element.Use the margin property to make sure that the element is center aligned according to its parent element.
+                        </p>
+                        </a>
+
+                    </div>
+                
+            </div>
+
+
+            <div class="col-md-6 col-sm-12 col-lg-6">
+                <div class="right-card">
+                    <img class="img-fluid img1" src="{% static 'emotion.png' %}">
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-sm-12 col-lg-6">
+                <div class="left-card">
+
+                    <img class="img-fluid img1" src="{% static 'ra.jpg' %}">
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 col-sm-12 col-lg-6">
+            
+                <div class="project-detail">
+                    <a href="#" >
+                    <h2>RA Studios</h2>
+                        <p>
+                            Use the margin property to make sure that the  element is center aligned according to its parent element.Use the margin property to make sure that the element is center aligned according to its parent element.
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="text-center mt-4">
+            <button type="submit" class="button2">View All</button>
+        </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ourblog">
+
+    <div class="container">
+        <div class="head-text">
+
+            <h3 class="text">Our Blog</h3>
+            <h2 class="shadow">Blog</h2>
+            <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+
+        </div>
+
+        
+
+        <div class="row">
+
+            {% for i in tblog %}
+            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
+
+                <div class="card">
+<!--                    <img src="{% static 'blog1.jpg' %}">-->
+
+                    {% if  i.image != "" %}
+                    <img src="{{i.image.url}}">
+                    {% endif %}
+
+                    <div class="texttt">
+                        <p class="date">{{ i.created_at|date:"M d, Y" }}   &nbsp;&nbsp;&nbsp;   {{i.author}}  &nbsp;&nbsp;&nbsp;    <span>
+                            <i class="fa-regular fa-message"></i> 3
+                        </span></p>
+                        <h5>
+                            <a href="/blog/{{i.slug}}">
+                                {{i.title}}
+                            </a>
+                        </h5>
+                        <p>
+                            {{i.meta_decription}}
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+
+
+            {% endfor %}
+
+<!--            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">-->
+
+<!--                <div class="card">-->
+<!--                    <img src="{% static 'blog2.jpg' %}">-->
+<!--    -->
+<!--                    <div class="texttt">-->
+<!--                        <p class="date">Oct 22, 2023   &nbsp;&nbsp;&nbsp;   CODEAJ  &nbsp;&nbsp;&nbsp;    <span>-->
+<!--                            <i class="fa-regular fa-message"></i> 3-->
+<!--                        </span></p>-->
+<!--                        <h5>-->
+<!--                            <a href="#">-->
+<!--                                7 Ways to Boost Your Immune System Naturally-->
+<!--                            </a>-->
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quod voluptatum natus eum-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--    -->
+<!--                </div>-->
+<!--    -->
+<!--            </div>-->
+
+<!--            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">-->
+
+<!--                <div class="card">-->
+<!--                    <img src="{% static 'blog4.jpg' %}">-->
+<!--    -->
+<!--                    <div class="texttt">-->
+<!--                        <p class="date">Oct 22, 2023   &nbsp;&nbsp;&nbsp;   CODEAJ  &nbsp;&nbsp;&nbsp;    <span>-->
+<!--                            <i class="fa-regular fa-message"></i> 3-->
+<!--                        </span></p>-->
+<!--                        <h5>-->
+<!--                            <a href="#">-->
+<!--                                7 Ways to Boost Your Immune System Naturally-->
+<!--                            </a>-->
+<!--                        </h5>-->
+<!--                        <p>-->
+<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quod voluptatum natus eum-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--    -->
+<!--                </div>-->
+<!--    -->
+<!--            </div>-->
+
+
+
+
+
+        </div>
+    </div>  
+</section>
+
+
+
+<section class="freelancer pb-5" id="freelancer">
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3">
+                <div class="card">
+                    <h2>10</h2>
+                    <p>Awards</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3">
+                <div class="card">
+                    <h2>56</h2>
+                    <p>Complete Projects</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3">
+                <div class="card">
+                    <h2>20</h2>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3">
+                <div class="card">
+                    <h2>25</h2>
+                    <p>Certificates</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="text text-center">
+
+            <h2>I'm <span>Avilable</span> for freelancing</h2>
+            <p>
+                I am a highly motivated and experienced web developer with over 5 years of experience <br> in developing websites. My expertise includes HTML, CSS,JS,Python.
+            </p>
+
+            <a href="#contact" class="button1">HIRE ME</a>
+
+        </div>
+
+
+    </div>
+
+    <br><br>
+
+
+</section>
+
+
+{% endblock %}
+
+<section class="contact pt-5 pb-5" id="contact">
+    <br><br><br>
+    <div class="container">
+
+        <div class="head-text">
+            <h3 class="text">Contact Me</h3>
+            <h2 class="shadow">Contact</h2>
+            <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+
+        </div>
+
+
+        <div class="row text-center">
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3"> 
+                <div class="cd">
+                    <a href="https://maps.app.goo.gl/uQ3QgWS4AJR6vYMBA">
+                    <div class="boo">
+                        <div class="bo">
+                        
+                        </div>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    
+                    
+                    
+                        <h5>ADDRESS</h5>
+                        <p>
+                            Upkar Layout, Whitefield, Bengaluru, Karnataka 560066
+                        </p>
+
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3"> 
+                <div class="cd">
+                    <a href="+tel:918603862290">
+                    <div class="boo">
+                        <div class="bo">
+                        
+                        </div>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    
+                    
+                    
+                        <h5>CONTACT NUMBER</h5>
+
+                        <p>
+                            +91 8603862290
+                        </p>
+                    </a>
+                    
+
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3"> 
+                <div class="cd">
+                    <a href="mailto:codeaj4u@gmail.com">
+                    <div class="boo">
+                        <div class="bo">
+                        
+                        </div>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    
+                    
+
+                    <h5>EMAIL ADDRESS</h5>
+
+                    
+                        <p>
+                            codeaj4u@gmail.com
+                        </p>
+                    </a>
+
+                    
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-sm-6 mb-3"> 
+                <div class="cd">
+
+                    <a href="https://wa.me/918603862290">
+                    <div class="boo">
+                        <div class="bo">
+                        
+                        </div>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    
+                    
+                    
+
+                        <h5>WHATSAPP</h5>
+
+                        <p>
+                            +91 8603862290
+                        </p>
+
+                    </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+<br><br>
+
+        <div class="row p-5">
+
+
+            <div class="col-md-12 col-lg-6 col-sm-12 p-5 con2">
+                <h4 class="text-center">Get in Touch</h4>
+                <br>
+                <input class="form-control mb-3" type="text" placeholder="YourName">
+                <input class="form-control mb-3" type="number" placeholder="PhoneNumber">
+                <input class="form-control mb-3" type="email" placeholder="YourEmail">
+                <textarea class="form-control mb-4" rows="5" cols="70" placeholder="Message"></textarea><br>
+                <div class="text-center">
+                    <button type="submit" class="button1">SUBMIT</button>
+                </div>
+                
+            </div>
+
+
+
+            <div class="col-md-12 col-lg-6 col-sm-12  con1">
+                <a href="https://github.com/ajayoneness">
+                    <img src="{% static 'gitprofile.jpg' %}">
+                </a>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+
+<section class="footer">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" width="180px"></a>
+                <p>
+                    Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions
+                </p>
+
+                <div class="row social-icon">
+                    <div class="col ">
+                        <a href="https://www.linkedin.com/in/codeaj/">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.instagram.com/code_ajay/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- <div class="col">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div> -->
+
+                    <div class="col">
+                        <a href="https://github.com/ajayoneness">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <br><br><br>
+                <h3>Link</h3>
+                <br>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <br><br><br>
+                <h3>Services</h3>
+                <br>
+                <ul>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>Mobile Development</li>
+                    <li>Data Analysis</li>
+                    <li>Al/Ml</li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <br><br><br>
+                <h3>Have a Questions?</h3>
+                <br>
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="col-10">
+                        Bangalore, India
+                    </div>
+
+                 
+
+                    <div class="col-2 mt-3">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="col-10 mt-3">
+                        +91 8603862290
+                    </div>
+
+
+                    <div class="col-2 mt-3">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="col-10 mt-3">
+                        codeaj4u@gmail.com
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="col-12  text-center p-4 copyright">
+        Copyright &#169;2023 All right reserved | codeAj
+    </div> 
+
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <script>
+
+
+
+
+    document.getElementById("popupsubmit").addEventListener("click", function() {
+    document.getElementById("loading").style.display = "block";
+
+    let phoneno = document.getElementById("phoneno").value;
+
+    // URL to your Django API endpoint
+    let apiUrl = '{% url 'teligram' %}';
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "message": phoneno }),
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Network response was not ok.');
+    })
+    .then(data => {
+        document.getElementById("thankyou").textContent = "Thank you 🙂";
+        document.getElementById("loading").style.display = "none";
+        console.log('Response:', data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // JavaScript code to rotate the circle based on mouse wheel scroll when hovered
+        const rotatingCircle = document.getElementById('rotatingCircle');
+        let isHovered = false;
+        let currentRotation = 0;
+
+        rotatingCircle.addEventListener('mouseenter', () => {
+        isHovered = true;
+        });
+
+        rotatingCircle.addEventListener('mouseleave', () => {
+        isHovered = false;
+        });
+
+        window.addEventListener('wheel', (event) => {
+        if (isHovered) {
+            currentRotation += event.deltaY;
+            rotatingCircle.style.transform = `rotate(${currentRotation}deg)`;
+            event.preventDefault(); // Prevent default scrolling behavior
+        }
+        });
+
+
+
+
+
+    </script>
+
+
+
+
+    
+    <script>
+
+
+        $(document).ready(function() {
+
+
+
+
+
+
+
+            $("#close").click(function(){
+                $("#popup").css("display", "none");
+            })
+
+
+            //popup-code
+
+           
+            /*function generateUserId() {
+                return 'user_' + Math.random().toString(36).substr(2, 9);
+            }
+
+
+            function hasPopupBeenShown() {
+                return sessionStorage.getItem('userId') !== null;
+            }
+
+
+            function displayPopup() {
+                var element = $("#popup");
+                //if (!hasPopupBeenShown()) {
+                    element.css("display", "block");
+                   // sessionStorage.setItem('userId', generateUserId());
+                //}
+            }
+
+
+
+            setTimeout(displayPopup, 10000);*/
+
+
+            function generateUserId() {
+                return 'user_' + Math.random().toString(36).substr(2, 9);
+            }
+
+            function hasPopupBeenShown() {
+                return sessionStorage.getItem('popupShown') !== null;
+            }
+
+            function displayPopup() {
+                var element = $("#popup");
+                if (!hasPopupBeenShown()) {
+                    element.css("display", "block");
+                    sessionStorage.setItem('popupShown', 'true');
+                }
+            }
+
+            setTimeout(displayPopup, 10000);
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var contentVisible = true;
+            $("#setting").click(function () {
+                if (contentVisible) {
+                    
+                    $(".setting").css("left","290px");
+                    $(".social-media").css("left","0px");
+                    
+
+
+                } else {
+                    $(".setting").css("left","0px");
+                    $(".social-media").css("left","-290px");
+                }
+                contentVisible = !contentVisible; // Toggle the flag
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            $('.carousel').carousel({
+                interval: 1000 * 10
+              });
+
+
+
+            const navbar = $('#navbar');
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    navbar.css('background-color', '#141414');
+                } else {
+                    navbar.css('background-color', 'black');
+                }
+            });
+
+
+
+
+
+
+
+
+
+            $("#close-menu").css({"display":"none"})
+
+            $("#menu").click(function() {
+                $("#mobile-menu").css({"display":"block"})
+                $("#close-menu").css({"display":"block"})
+                $("#menu").css({"display":"none"})
+
+
+            });
+
+            $("#close-menu").click(function() {
+                $("#mobile-menu").css({"display":"none"})
+                $("#close-menu").css({"display":"none"})
+                $("#menu").css({"display":"block"})
+
+            });
+
+        });
+
+
+    </script>
+
+</body>
+</html>
