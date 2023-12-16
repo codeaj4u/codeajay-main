@@ -132,7 +132,7 @@
                         {% if  topblog.image != "" %}
 
 
-                        <img  class="img-fluid" src="{{topblog.image.url}}" alt="post-image">
+                        <img  class="img-fluid" src="{{topblog.image.url}}" alt="{{topblog.title}}">
 
 
                         {% endif %}
@@ -186,7 +186,7 @@
 
                         {% if blog.image != "" %}
 
-                        <img src="{{blog.image.url}}" class="img-fluid immg" alt="blog-image">
+                        <img src="{{blog.image.url}}" class="img-fluid immg" alt="{{blog.title}}">
 
                         {% endif %}
 
