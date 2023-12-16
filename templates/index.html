@@ -1662,7 +1662,7 @@ a:hover{
                 <div class="row">
                     
                     <div class="col-sm-12 col-lg-5 col-md-5 leftpopupbox">
-                        <img src="{% static  'popup.png' %}" width="300">
+                        <img src="{% static  'popup.png' %}" width="300" alt="codeaj Logo">
 
                     </div>
                     <div class="col-sm-12 col-lg-7 col-md-7 rightpopupbox">
@@ -1675,7 +1675,7 @@ a:hover{
                         <input class="form-control mb-3" id="phoneno" type="number" placeholder="PhoneNumber">
                         <!-- <input class="form-control mb-3" type="email" placeholder="YourEmail"> -->
                         <div class="" id="loading">
-                            <img src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif" width="130px">
+                            <img src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif" width="130px" alt="loading">
                         </div>
                         <p id="thankyou"></p>
 
@@ -1782,7 +1782,7 @@ a:hover{
                 <div class="col logo">
 
                     <a href="{% url 'home' %}">
-                        <img class="img-fluid" src="{% static 'logo.png' %}">
+                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
                     </a>
 
                     <i class="fa-solid fa-bars menu " id="menu" ></i>
@@ -1791,7 +1791,7 @@ a:hover{
 
                 <div class="col menu-text" id="mobile-menu" >
                     <ul>
-                        <img class="img-fluid" src="{% static 'logo.png' %}">
+                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="/blog/{{blogs.0.slug}}">Blog</a></li>
                         <li><a href="/#about">About</a></li>
@@ -1866,7 +1866,7 @@ a:hover{
                 
                 <div class="col-md-12 col-lg-6 col-sm-12 main-image mt-3 ">
                     <div class="booooox">
-                        <!-- <img class="img-fluid" src="/aj.jpg"> -->
+
 
                         <div class="weel" id="rotatingCircle">
     
@@ -1915,7 +1915,7 @@ a:hover{
                 <div class="col-md-12 col-lg-6 col-sm-12 mt-5">
                     <br><br>
                     <a href="https://www.linkedin.com/in/codeaj/">
-                        <img src="{% static 'linkedin1.jpg' %}" class="img-fluid " style="margin-top: 130px;">
+                        <img src="{% static 'linkedin1.jpg' %}" class="img-fluid " style="margin-top: 130px;" alt="linkedin">
                     </a> 
 
                     <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="codeaj" data-version="v1">
@@ -1961,7 +1961,7 @@ a:hover{
                     </div>
 
 
-                    <img src="">
+
                 </div>
 
             </div>
@@ -2151,7 +2151,7 @@ a:hover{
                 <div class="col-md-6 col-sm-12 col-lg-6">
                     <div class="right-card">
 
-                        <img class="img-fluid img1" src="{% static 'playhere.jpg' %}">
+                        <img class="img-fluid img1" src="{% static 'playhere.jpg' %}" alt="playhere">
                         
                     </div>
 
@@ -2162,7 +2162,7 @@ a:hover{
                 <div class="col-md-6 col-sm-12 col-lg-6">
                     <div class="left-card">
 
-                        <img class="img-fluid img1" src="{% static 'kalyan.jpg' %}">
+                        <img class="img-fluid img1" src="{% static 'kalyan.jpg' %}" alt="kalyan">
                     </div>
                 </div>
 
@@ -2197,7 +2197,7 @@ a:hover{
 
             <div class="col-md-6 col-sm-12 col-lg-6">
                 <div class="right-card">
-                    <img class="img-fluid img1" src="{% static 'emotion.png' %}">
+                    <img class="img-fluid img1" src="{% static 'emotion.png' %}" alt="emotion">
                     
                 </div>
 
@@ -2208,7 +2208,7 @@ a:hover{
             <div class="col-md-6 col-sm-12 col-lg-6">
                 <div class="left-card">
 
-                    <img class="img-fluid img1" src="{% static 'ra.jpg' %}">
+                    <img class="img-fluid img1" src="{% static 'ra.jpg' %}" alt="RA">
                 </div>
             </div>
 
@@ -2285,10 +2285,9 @@ a:hover{
             <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
 
                 <div class="card">
-<!--                    <img src="{% static 'blog1.jpg' %}">-->
 
                     {% if  i.image != "" %}
-                    <img src="{{i.image.url}}">
+                    <img src="{{i.image.url}}" alt="blog-img">
                     {% endif %}
 
                     <div class="texttt">
@@ -2311,57 +2310,6 @@ a:hover{
 
 
             {% endfor %}
-
-<!--            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">-->
-
-<!--                <div class="card">-->
-<!--                    <img src="{% static 'blog2.jpg' %}">-->
-<!--    -->
-<!--                    <div class="texttt">-->
-<!--                        <p class="date">Oct 22, 2023   &nbsp;&nbsp;&nbsp;   CODEAJ  &nbsp;&nbsp;&nbsp;    <span>-->
-<!--                            <i class="fa-regular fa-message"></i> 3-->
-<!--                        </span></p>-->
-<!--                        <h5>-->
-<!--                            <a href="#">-->
-<!--                                7 Ways to Boost Your Immune System Naturally-->
-<!--                            </a>-->
-<!--                        </h5>-->
-<!--                        <p>-->
-<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quod voluptatum natus eum-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--    -->
-<!--                </div>-->
-<!--    -->
-<!--            </div>-->
-
-<!--            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">-->
-
-<!--                <div class="card">-->
-<!--                    <img src="{% static 'blog4.jpg' %}">-->
-<!--    -->
-<!--                    <div class="texttt">-->
-<!--                        <p class="date">Oct 22, 2023   &nbsp;&nbsp;&nbsp;   CODEAJ  &nbsp;&nbsp;&nbsp;    <span>-->
-<!--                            <i class="fa-regular fa-message"></i> 3-->
-<!--                        </span></p>-->
-<!--                        <h5>-->
-<!--                            <a href="#">-->
-<!--                                7 Ways to Boost Your Immune System Naturally-->
-<!--                            </a>-->
-<!--                        </h5>-->
-<!--                        <p>-->
-<!--                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quod voluptatum natus eum-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--    -->
-<!--                </div>-->
-<!--    -->
-<!--            </div>-->
-
-
-
-
-
         </div>
     </div>  
 </section>
@@ -2563,7 +2511,7 @@ a:hover{
 
             <div class="col-md-12 col-lg-6 col-sm-12  con1">
                 <a href="https://github.com/ajayoneness">
-                    <img src="{% static 'gitprofile.jpg' %}">
+                    <img src="{% static 'gitprofile.jpg' %}" alt="github">
                 </a>
             </div>
             
@@ -2584,7 +2532,7 @@ a:hover{
 
         <div class="row">
             <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" width="180px"></a>
+                <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" width="180px" alt="Logo"></a>
                 <p>
                     Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions
                 </p>
