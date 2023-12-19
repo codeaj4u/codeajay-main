@@ -52,7 +52,7 @@ class post_create(models.Model):
     correct_option = models.CharField(blank=True, null=True, max_length=255)
     full_details = models.TextField(null=True, blank=True)
     image = models.FileField(default="", upload_to="autopost/", null=True, blank=True)
-    meta_decription = models.TextField(null=True, blank=True)
+    meta_description = models.TextField(null=True, blank=True)
     meta_keywords = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(null=True, blank=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, blank=True, auto_now=True)
