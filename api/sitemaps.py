@@ -20,7 +20,7 @@ class custom_sitemap(Sitemap):
     priority = 0.9
 
     def items(self):
-        return ['']
+        return ['','/about','/contact']
 
     def location(self, item):
         return item

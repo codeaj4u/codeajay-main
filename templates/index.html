@@ -1796,8 +1796,8 @@ a:hover{
                         <li><a href="/blog/{{blogs.0.slug}}">Blog</a></li>
                         <li><a href="/#service">Service</a></li>
                         <li><a href="/#portfolio">Portfolio</a></li>
-                        <li><a href="/#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -2412,7 +2412,7 @@ a:hover{
 
             <div class="col-md-4 col-lg-3 col-sm-6 mb-3"> 
                 <div class="cd">
-                    <a href="+tel:918603862290">
+                    <a href="tel:+918603862290">
                     <div class="boo">
                         <div class="bo">
                         
@@ -2629,7 +2629,7 @@ a:hover{
     </div>
 
     <div class="col-12  text-center p-4 copyright">
-        Copyright &#169;2023 All right reserved | codeAj
+        Copyright &#169;2023 All right reserved | <a href="{% url 'privacy-policy' %}">Privacy Policy</a>
     </div> 
 
 </section>
