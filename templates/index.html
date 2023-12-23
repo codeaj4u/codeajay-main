@@ -265,7 +265,8 @@
 
 
         .main{
-            height:100vh;
+            height:auto;
+            padding-bottom : 70px;
 
         }
 
@@ -789,6 +790,12 @@
 
         @media only screen and (max-width: 600px) {
 
+
+            .weel {
+
+                display:none;
+
+            }
 
             .popup .popupbox{
                 position: absolute;
@@ -1638,15 +1645,86 @@ a:hover{
 }
 
 
-        
-
-
-        
 
 
 
+.home-active{
 
-    </style>
+    color : #FFBD3A;
+}
+.blog-active{
+
+    color : white;
+}
+.about-active{
+
+    color : white;
+}
+.contact-active{
+
+    color : white;
+}
+
+
+
+.blognav .dropdownbox{
+
+    position :fixed;
+    width : 35%;
+    color: white;
+    top : 12%;
+    left:50%;
+    z-index : 999999;
+    padding : 20px;
+    background-color:rgba(0, 0, 0, 0.553);
+    clip-path: circle(0% at 50% 50%);
+    transition-delay :0.3s;
+
+}
+
+.blognav .dropdownbox a{
+    color: white;
+    padding-top: 10px;
+}
+
+
+
+
+.blognav:hover .dropdownbox a{
+    color: white;
+}
+
+
+.blognav:hover .dropdownbox{
+    background-color:rgb(0, 0, 0);
+    clip-path: circle(100% at 50% 50%);
+
+}
+
+.blognav .dropdownbox a:hover{
+    color:#FFBD3A;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .whatapppopup{
+        display:none;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+</style>
 
 
 
@@ -1766,43 +1844,12 @@ a:hover{
 
 
 
-    <nav class="Navigation-bar" id="navbar" >
-
-        <div class="effect">
-
-            <div class="e1"></div>
-            <div class="e2"></div>
-
-        </div>
+<!-- include   nav    -->
 
 
-        <div class="container">
-            <div class="row">
+{% include 'nav.html' %}
 
-                <div class="col logo">
 
-                    <a href="{% url 'home' %}">
-                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
-                    </a>
-
-                    <i class="fa-solid fa-bars menu " id="menu" ></i>
-                    <i class="fa-solid fa-xmark menu1 " id="close-menu"></i>
-                </div>
-
-                <div class="col menu-text" id="mobile-menu" >
-                    <ul>
-                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="/blog/{{blogs.0.slug}}">Blog</a></li>
-                        <li><a href="/#service">Service</a></li>
-                        <li><a href="/#portfolio">Portfolio</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
 
 
 

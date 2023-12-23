@@ -5,8 +5,7 @@ from django.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
     path("<slug:slug>/",views.singleblog,name="singleblog"),
-
-
+    path("category/<slug:cat>/",views.category,name="category"),
 
 
 ]

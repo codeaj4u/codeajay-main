@@ -1,0 +1,59 @@
+
+{% load static %}
+<nav class="Navigation-bar" id="navbar" >
+
+        <div class="effect">
+
+            <div class="e1"></div>
+            <div class="e2"></div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col logo">
+
+                    <a href="{% url 'home' %}">
+                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
+                    </a>
+
+                    <i class="fa-solid fa-bars menu " id="menu" ></i>
+                    <i class="fa-solid fa-xmark menu1 " id="close-menu"></i>
+                </div>
+
+                <div class="col menu-text" id="mobile-menu" >
+                    <ul>
+                        <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
+                        <li><a class="home-active" href="{% url 'home' %}">Home</a></li>
+                        <li class="blognav"><a class="blog-active" href="/blog/{{blogs.0.slug}}">Blog</a>
+
+                        <div class="dropdownbox">
+
+                            <div class="row">
+
+
+                            {% for i in cat %}
+                                <div class="col-4 mb-2">
+                                    <a href="/blog/category/{{i.slug}}">{{i.category}}</a>
+                                </div>
+
+                                {% endfor %}
+
+
+                            </div>
+
+
+                        </div>
+
+                        </li>
+                        <li><a href="/#service">Service</a></li>
+                        <li><a href="/#portfolio">Portfolio</a></li>
+                        <li><a class="about-active" href="{% url 'about' %}">About</a></li>
+                        <li><a class="contact-active" href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>

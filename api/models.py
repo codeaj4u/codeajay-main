@@ -33,6 +33,16 @@ class blog_category(models.Model):
     decription = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(null=True, blank=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, blank=True, auto_now=True)
+    slug = models.SlugField(max_length=500, blank=True)
+
+
+    def get_absolute_url(self):
+        return f"/blog/category/{self.slug}"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.category)[:500]
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.category

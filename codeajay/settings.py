@@ -72,15 +72,31 @@ WSGI_APPLICATION = 'codeajay.wsgi.application'
 
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Gg4dgfB-FaE5edBcab*afBb**4E1d4GD',
+#         'HOST': 'roundhouse.proxy.rlwy.net',
+#         'PORT': '18316',
+#     }
+# }
+
+
+
+# To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'Gg4dgfB-FaE5edBcab*afBb**4E1d4GD',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '18316',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'codeaj',
+    'USER': 'codeaj4u@gmail.com',
+    'PASSWORD': 'RqfpO2icnsL5',
+    'HOST': 'ep-twilight-lake-a128ipm1.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
 }
 
 
