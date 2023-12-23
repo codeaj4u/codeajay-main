@@ -5,6 +5,7 @@ class blog_post_sitemap(Sitemap):
 
     changefreq = 'daily'
     priority = 0.9
+    protocol = 'https'
 
     def items(self):
         return post_create.objects.all()
@@ -18,6 +19,7 @@ class custom_sitemap(Sitemap):
 
     changefreq = 'daily'
     priority = 0.9
+    protocol = 'https'
 
     def items(self):
         return ['','/about','/contact']
