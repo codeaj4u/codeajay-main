@@ -27,9 +27,10 @@
                     <ul>
                         <img class="img-fluid" src="{% static 'logo.png' %}" alt="codeaj logo">
                         <li><a class="home-active" href="{% url 'home' %}">Home</a></li>
-                        <li class="blognav"><a class="blog-active" href="/blog/{{blogs.0.slug}}">Blog</a>
+                        <div id="des">
+                            <li class="blognav" ><a class="blog-active" href="/blog/{{blogs.0.slug}}">Blog</a>
 
-                        <div class="dropdownbox">
+                            <div class="dropdownbox">
 
                             <div class="row">
 
@@ -43,9 +44,36 @@
 
 
                             </div>
-
+                            </div>
 
                         </div>
+
+
+                        <div id="mob">
+
+                            <li class="blognav" ><a class="blog-active">Blog</a>
+
+                            <div class="dropdownbox">
+
+                            <div class="row">
+
+
+                            {% for i in cat %}
+                                <div class="col-md-4 col-sm-12 col-lg-4 mb-2">
+                                    <a href="/blog/category/{{i.slug}}">{{i.category}}</a>
+                                </div>
+
+                                {% endfor %}
+
+
+                            </div>
+                            </div>
+
+                        </div>
+
+
+
+
 
                         </li>
                         <li><a href="/#service">Service</a></li>
