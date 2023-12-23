@@ -1,0 +1,91 @@
+
+
+
+{% extends 'index.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+
+
+<meta charset="UTF-8">
+<title>{% block title %}{{tblog.0.title}}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{tblog.0.meta_description}}{% endblock %}">
+<meta name="keywords" content="{% block keywords %}{{tblog.0.meta_keywords}}{% endblock %}">
+<meta name="author" content="{% block author %}{{tblog.0.author}}{% endblock %}">
+<link rel="canonical" href="{% block canonical %}https://codeajay.in/blog/catrgory/{{tblog.0.category.slug}}{% endblock %}">
+
+
+
+<section class="ourblog" >
+
+    <div class="container">
+        <div class="head-text" style="margin-top: 100px;">
+
+            <h3 class="text">{{tblog.0.category.category}}</h3>
+            <h2 class="shadow">{{tblog.0.category.category}}</h2>
+            <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
+
+        </div>
+
+        
+
+        <div class="row">
+
+            {% if tblog %}
+
+            {% for i in tblog %}
+            <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
+
+                <div class="card">
+
+                    {% if  i.image != "" %}
+                    <img src="{{i.image.url}}" alt="{{i.title}}">
+                    {% endif %}
+
+                    <div class="texttt">
+                        <p class="date">{{ i.created_at|date:"M d, Y" }}   &nbsp;&nbsp;&nbsp;   {{i.author}}  &nbsp;&nbsp;&nbsp;    <span>
+                            <i class="fa-regular fa-message"></i> 3
+                        </span></p>
+                        <h5>
+                            <a href="/blog/{{i.slug}}">
+                                {{i.title}}
+                            </a>
+                        </h5>
+                        <p>
+                            {{i.meta_description}}
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+
+            {% endfor %}
+
+            {% else %}
+
+            <h1 class="text-center" style="color: white;">Coming Soon.....</h1>
+
+            {% endif %}
+
+
+
+        </div>
+    </div>  
+</section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
