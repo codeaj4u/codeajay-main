@@ -77,7 +77,8 @@ def contact(request):
 
     cat = blog_category.objects.all()
     all_blog = post_create.objects.all().order_by('-id')
-    return render(request, 'contact.html',{"blogs":all_blog,'cat':cat})
+    three_blog = post_create.objects.all().order_by('-id')[:3]
+    return render(request, 'contact.html',{"blogs":all_blog,'cat':cat,'tblog':three_blog})
 
 def about(request):
     if request.method == "POST":
@@ -102,7 +103,8 @@ def about(request):
 
     cat = blog_category.objects.all()
     all_blog = post_create.objects.all().order_by('-id')
-    return render(request, 'about.html' ,{"blogs":all_blog,'cat':cat})
+    three_blog = post_create.objects.all().order_by('-id')[:3]
+    return render(request, 'about.html' ,{"blogs":all_blog,'cat':cat,'tblog':three_blog})
 
 def privacy_policy(request):
     if request.method == "POST":
@@ -127,5 +129,6 @@ def privacy_policy(request):
 
     cat = blog_category.objects.all()
     all_blog = post_create.objects.all().order_by('-id')
-    return render(request, 'privacy-policy.html',{"blogs":all_blog,'cat':cat})
+    three_blog = post_create.objects.all().order_by('-id')[:3]
+    return render(request, 'privacy-policy.html',{"blogs":all_blog,'cat':cat,'tblog':three_blog})
 

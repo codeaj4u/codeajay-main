@@ -2636,29 +2636,76 @@ a:hover{
                 <h3>Link</h3>
                 <br>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+
+
+
+                    <li><a class="home-active" href="{% url 'home' %}">Home</a></li>
+                        <li class="blognav"><a class="blog-active" href="/blog/{{blogs.0.slug}}">Blog</a></li>
+                        <li><a href="/#service">Service</a></li>
+                        <li><a href="/#portfolio">Portfolio</a></li>
+                        <li><a class="about-active" href="{% url 'about' %}">About</a></li>
+                        <li><a class="contact-active" href="{% url 'contact' %}">Contact</a></li>
+
+
                 </ul>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
             <div class="col-md-6 col-sm-12 col-lg-3">
                 <br><br><br>
-                <h3>Services</h3>
+                <h3>Latest Blog</h3>
                 <br>
-                <ul>
-                    <li>Web Design</li>
-                    <li>Web Development</li>
-                    <li>Mobile Development</li>
-                    <li>Data Analysis</li>
-                    <li>Al/Ml</li>
-                </ul>
+
+                <div class="row">
+
+                    {% for blog in tblog %}
+
+                    <div class="col-3 mb-3">
+
+                        {% if blog.image != "" %}
+
+                        <img src="{{blog.image.url}}" class="img-fluid immg" alt="{{blog.title}}">
+
+                        {% endif %}
+
+
+                    </div>
+
+                    <div class="col-8 mb-3 ">
+                        <p class="ttle"><a href="/blog/{{blog.slug}}">{{blog.title}}</a></p>
+                    </div>
+
+                    {% endfor %}
+
+
+
+                </div>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
             <div class="col-md-6 col-sm-12 col-lg-3">
                 <br><br><br>
