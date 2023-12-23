@@ -17,6 +17,26 @@
 <meta name="author" content="{% block author %}{{tblog.0.author}}{% endblock %}">
 <link rel="canonical" href="{% block canonical %}https://codeajay.in/blog/catrgory/{{tblog.0.category.slug}}{% endblock %}">
 
+<style>
+
+    .home-active{
+
+    color : white;
+}
+.blog-active{
+
+    color : #FFBD3A;
+}
+.about-active{
+
+    color : white;
+}
+.contact-active{
+
+    color : white;
+}
+
+</style>
 
 
 <section class="ourblog" >
@@ -26,11 +46,14 @@
 
             <h3 class="text">{{tblog.0.category.category}}</h3>
             <h2 class="shadow">{{tblog.0.category.category}}</h2>
+            {% if tblog.0.category.decription != "" %}
+            <p class="decription">{{tblog.0.category.decription}}</p>
+            {% else %}
             <p class="decription">Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions</p>
-
+            {% endif %}
         </div>
 
-        
+
 
         <div class="row">
 
@@ -58,9 +81,9 @@
                             {{i.meta_description}}
                         </p>
                     </div>
-    
+
                 </div>
-    
+
             </div>
 
             {% endfor %}
@@ -74,7 +97,7 @@
 
 
         </div>
-    </div>  
+    </div>
 </section>
 
 
