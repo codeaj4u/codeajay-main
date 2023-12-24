@@ -6,16 +6,24 @@
 
 {% load static %}
 {% block content %}
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>{% block title %}{{topblog.title}}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{topblog.meta_description}}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{{topblog.meta_keywords}}{% endblock %}">
+    <meta name="author" content="{% block author %}{{topblog.author}}{% endblock %}">
+    <link rel="canonical" href="{% block canonical %}https://codeajay.in/blog/{{topblog.slug}}{% endblock %}">
 
 
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2877392052691878"
+     crossorigin="anonymous"></script>
+</head>
 
-<meta charset="UTF-8">
-<title>{% block title %}{{topblog.title}}{% endblock %}</title>
-<meta name="description" content="{% block description %}{{topblog.meta_description}}{% endblock %}">
-<meta name="keywords" content="{% block keywords %}{{topblog.meta_keywords}}{% endblock %}">
-<meta name="author" content="{% block author %}{{topblog.author}}{% endblock %}">
-<link rel="canonical" href="{% block canonical %}https://codeajay.in/blog/{{topblog.slug}}{% endblock %}">
+
+
 
 
 <style>
