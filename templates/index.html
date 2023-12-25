@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}codeAj | Free College Major Projects | Affordable Software Development Services at CodeAjay{% endblock %}</title>
+    <title>{% block title %}codeAj | Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions {% endblock %}</title>
 
     <meta name="description" content="{% block description %}Get a wide range of free college major projects and affordable software development services from CodeAjay. Get the best of both worlds today!{% endblock %}" />
     <meta name="keywords" content="{% block keywords %}college major projects, free college major projects, affordable software development services, web development, mobile development, machine learning, software development,  web design, CodeAjay, codeaj{% endblock %}" />
@@ -1747,7 +1747,36 @@ a:hover{
     }
 
 
+
+#preloader{
+    background : #1C213B url({% static 'loader.gif' %}) no-repeat center center;
+    background-size : 20%;
+    height: 100vh;
+    width : 100%;
+    position : fixed;
+    z-index : 999999999999999999999999999;
+
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
+
+    #preloader{
+
+    background : #1C213B url({% static 'loader.gif' %}) no-repeat center center;
+    background-size : 80%;
+    height: 100vh;
+    width : 100%;
+    position : fixed;
+    z-index : 999999999999999999999999999;
+
+    }
+
+
+
+
 
     .whatapppopup{
         display:none;
@@ -1802,6 +1831,8 @@ a:hover{
 
 
 
+
+
 </style>
 
 
@@ -1812,6 +1843,15 @@ a:hover{
 
 
 <body>
+
+
+<div id="preloader">
+
+</div>
+
+
+
+
     <div class="popup" id="popup">
         <div class="popupbox popupcontents">
             <p class="close" id="close">X</p>
@@ -3059,6 +3099,22 @@ a:hover{
 
 
     </script>
+
+
+<script>
+
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load",function(){
+
+        loader.style.display = "none"
+
+    })
+
+
+</script>
+
+
 
 </body>
 </html>
