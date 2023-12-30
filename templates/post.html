@@ -308,7 +308,7 @@
                         <input type="submit" class="bttn" value="Publish">
                         <img class=" m-3" width="30px" id="loadd"  src="{% static 'loader1.gif' %}">
 
-                        <p id="thankyou" style="color:green;"></p>
+                        <p id="mes1" style="color:green;"></p>
 
                     </form>
 
@@ -448,7 +448,7 @@ $('#contact-form').submit(function(e) {
           data: formData,
           success: function(response) {
               console.log('Contact created:', response);
-              $("#thankyou").text("Thankyou For You Comment 😊")
+              $("#mes1").text("Thankyou For You Comment 😊");
               $("#name").val("")
               $("#comment").val("")
               $('#codeaj').empty();
@@ -459,6 +459,7 @@ $('#contact-form').submit(function(e) {
           },
           error: function(error) {
               console.error('Error:', error.responseJSON);
+              $("#mes1").text("Try Again");
           }
       });
 
