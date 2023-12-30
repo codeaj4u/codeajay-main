@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser,post_create
+from .models import CustomUser,post_create,Comments
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,4 +16,14 @@ class UserSerializer(serializers.ModelSerializer):
 class PostCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = post_create
+        fields = '__all__'
+
+
+
+# post comments
+
+
+class CommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comments
         fields = '__all__'

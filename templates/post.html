@@ -62,6 +62,63 @@
         color : white;
     }
 
+    .comments textarea{
+                background-color: rgba(0, 0, 0, 0.393);
+                height: 150px;
+                border : none;
+                color :rgb(142, 142, 142);
+                border-radius: 5px;
+
+            }
+
+            .comments h5{
+                color: white;
+
+            }
+
+            .bttn{
+                padding: 8px;
+                font-size: 16px;
+                margin-top: 15px;
+                border: none;
+                font-weight: 600;
+                background-color: white;
+                transition: ease-in-out;
+                transition-duration: 0.4s;
+            }
+
+            .bttn:hover{
+                background-color: #FFBD3A;
+
+            }
+
+            .namebox{
+
+                background-color: rgba(0, 0, 0, 0.393);
+                border : none;
+                color :rgb(142, 142, 142);
+                border-radius: 5px;
+                margin: 20px 0px;
+                padding: 10px;
+            }
+
+
+            .boxxxxx{
+                margin-top: 110px;
+                height: 300px;
+                overflow-y: scroll;
+            }
+
+            #loadd{
+                display:none;
+            }
+
+
+
+
+
+
+
     
 
 
@@ -233,59 +290,7 @@
         </div>
 
 
-        <style>
 
-           
-            .comments textarea{
-                background-color: rgba(0, 0, 0, 0.393);
-                height: 150px;
-                border : none;
-                color :rgb(142, 142, 142);
-                border-radius: 5px;
-                
-            }
-
-            .comments h5{
-                color: white;
-
-            }
-
-            .bttn{
-                padding: 8px;
-                font-size: 16px;
-                margin-top: 15px;
-                border: none;
-                font-weight: 600;
-                background-color: white;
-                transition: ease-in-out;
-                transition-duration: 0.4s;
-            }
-
-            .bttn:hover{
-                background-color: #FFBD3A;
-
-            }
-
-            .namebox{
-
-                background-color: rgba(0, 0, 0, 0.393);
-                border : none;
-                color :rgb(142, 142, 142);
-                border-radius: 5px;
-                margin: 20px 0px;
-                padding: 10px;                
-            }
-
-
-            .boxxxxx{
-                margin-top: 110px;
-                height: 300px;
-                overflow-y: scroll;
-            }
-
-
-        
-        </style>
 
 
 
@@ -295,13 +300,20 @@
                 <div class="col-sm-12 col-lg-9 col-md-12 ">
                     <h5 class="mb-3">COMMENT AS POST</h5>
 
-                    <input type="name" class="form-control namebox" placeholder="Enter Your Name">
-
-                    <textarea class="form-control" placeholder="COMMENT"></textarea>
+                    <form id="contact-form" method="post">
 
 
+                        <textarea id="comment" class="form-control" placeholder="COMMENT" required></textarea>
+                        <input id="name" type="name" class="form-control namebox" placeholder="Enter Your Name" required>
+                        <input type="submit" class="bttn" value="Publish">
+                        <img class=" m-3" width="30px" id="loadd"  src="{% static 'loader1.gif' %}">
 
-                    <button class="bttn">Publish</button>
+                        <p id="thankyou" style="color:green;"></p>
+
+                    </form>
+
+
+
     
                 </div>
             </div>
@@ -314,46 +326,14 @@
 
 
 
+
     <h5 style="color:white;">All Comments</h5>
 
 
-    <div class="boxxxxx col-md-12 col-lg-9 col-sm-12">
+    <div class="boxxxxx col-md-12 col-lg-9 col-sm-12" id="codeaj">
 
 
-        <div class="col-md-12 col-lg-9 col-sm-12 main-text">
-            <div class="code-box">
-                <h3 id="question">
-                    Ajay Pandit
-                </h3>
-                <br>
-                <code class="code" id="texttttt">
-                   '''
-                    Love this blog
-                    '''
-    
-                </code>
-    
-            </div>
-    
-        </div>
-    
-    
-        <div class="col-md-12 col-lg-9 col-sm-12 main-text">
-            <div class="code-box">
-                <h3 id="question">
-                    Akshat Raj
-                </h3>
-                <br>
-                <code class="code" id="texttttt">
-                   '''
-                    Good Post
-                    '''
-    
-                </code>
-    
-            </div>
-    
-        </div>
+
 
 
 
@@ -393,6 +373,105 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+
+    function allcomments(){
+
+    $.ajax({
+      url: `/api/comments/filter/{{topblog.id}}`,
+      method: 'GET',
+      dataType: 'json',
+      success: function(response) {
+
+
+        response = response.reverse()
+        response.forEach(function(element) {
+
+             var mainContainer = $('<div></div>').addClass('col-md-12 col-lg-9 col-sm-12 main-text');
+
+             var codeBox = $('<div></div>').addClass('code-box');
+
+             var h3Element = $('<h3>'+element.name+'</h3>').attr('id', 'commentername');
+
+             var lineBreak = $('<br>');
+
+             var codeElement = $("<code>'''"+element.comment+"'''</code>").addClass('code').attr('id', 'texttttt');
+
+             codeBox.append(h3Element, lineBreak, codeElement);
+
+             $('#codeaj').append(mainContainer.append(codeBox));
+
+            })
+
+      },
+      error: function(xhr, status, error) {
+        console.error('Error occurred:', error);
+      }
+    });
+
+    }
+
+
+    allcomments()
+
+
+
+
+
+
+
+
+
+$('#contact-form').submit(function(e) {
+        e.preventDefault();
+        $("#loadd").css("display","block")
+        var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
+
+
+        var formData = {
+            blog_category: {{topblog.id}},
+            name: $("#name").val(),
+            comment: $("#comment").val(),
+            csrfmiddlewaretoken: csrftoken,
+        };
+
+          console.log(formData)
+
+
+          $.ajax({
+          type: 'POST',
+          url: '/api/comments/',
+          data: formData,
+          success: function(response) {
+              console.log('Contact created:', response);
+              $("#thankyou").text("Thankyou For You Comment 😊")
+              $("#name").val("")
+              $("#comment").val("")
+              $('#codeaj').empty();
+              allcomments()
+              $("#loadd").css("display","none")
+
+
+          },
+          error: function(error) {
+              console.error('Error:', error.responseJSON);
+          }
+      });
+
+})
+
+
+
+
+
+
+
+
+</script>
 
 
 
@@ -413,7 +492,7 @@
             if (i < wordsArray.length) {
                 document.getElementById(elementId).innerHTML += wordsArray[i] + " ";
                 i++;
-                setTimeout(appendText, 300); // Adjust delay between words (e.g., 300 milliseconds)
+                setTimeout(appendText, 300);
             }
         }
 
@@ -428,7 +507,7 @@
             if (i < wordsArray.length) {
                 document.getElementById(elementId).innerHTML += wordsArray[i];
                 i++;
-                setTimeout(appendText, 100); // Adjust delay between characters (e.g., 100 milliseconds)
+                setTimeout(appendText, 100);
             }
         }
 

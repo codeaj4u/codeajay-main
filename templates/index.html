@@ -2865,41 +2865,40 @@ a:hover{
 
 
 
-/*
-    document.getElementById("popupsubmit").addEventListener("click", function() {
-    document.getElementById("loading").style.display = "block";
+    //document.getElementById("popupsubmit").addEventListener("click", function() {
+    //document.getElementById("loading").style.display = "block";
 
-    let phoneno = document.getElementById("phoneno").value;
+    //let phoneno = document.getElementById("phoneno").value;
 
     // URL to your Django API endpoint
-    let apiUrl = '{% url 'teligram' %}';
+    //let apiUrl = '{% url 'teligram' %}';
 
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ "message": phoneno }),
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error('Network response was not ok.');
-    })
-    .then(data => {
-        document.getElementById("thankyou").textContent = "Thank you 🙂";
-        document.getElementById("loading").style.display = "none";
-        console.log('Response:', data);
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-});
+    //fetch(apiUrl, {
+     //   method: 'POST',
+    //    headers: {
+    //        'Content-Type': 'application/json',
+     //   },
+    //    body: JSON.stringify({ "message": phoneno }),
+    //})
+    //.then(response => {
+    //    if (response.ok) {
+    //        return response.json();
+    //    }
+    //    throw new Error('Network response was not ok.');
+    //})
+    //.then(data => {
+    //    document.getElementById("thankyou").textContent = "Thank you 🙂";
+    //    document.getElementById("loading").style.display = "none";
+    //    console.log('Response:', data);
+    //})
+    //.catch(error => {
+    //    console.error('There was a problem with the fetch operation:', error);
+    //});
+//});
 
 
 
-*/
+
 
 
 

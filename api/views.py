@@ -13,6 +13,10 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import asyncio
 
+from rest_framework import generics
+from .models import Comments
+from .serializers import CommentsSerializer
+
 
 @api_view(['POST'])
 def user_login(request):
@@ -94,6 +98,25 @@ def send_telegram_api(request):
         return Response({'status': 'success', 'message': 'Telegram message sent'})
     except:
         return Response({'status': 'error', 'message': 'Failed to send Telegram message'})
+
+
+# API endpoint to list all comments or create a new comment
+class CommentsListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Comments.objects.all()
+    serializer_class = CommentsSerializer
+
+# API endpoint to retrieve, update or delete a specific comment
+class CommentsRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comments.objects.all()
+    serializer_class = CommentsSerializer
+
+
+class CommentsFilterByCategoryAPIView(generics.ListAPIView):
+    serializer_class = CommentsSerializer
+
+    def get_queryset(self):
+        blog_category_id = self.kwargs['blog_category_id']
+        return Comments.objects.filter(blog_category=blog_category_id)
 
 
 

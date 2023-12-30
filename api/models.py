@@ -79,3 +79,14 @@ class post_create(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)[:500]  
         super().save(*args, **kwargs)
+
+
+
+class Comments(models.Model):
+    blog_category = models.ForeignKey(post_create, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, null=True, blank=True)
+    comment = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.comment
+
