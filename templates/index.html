@@ -32,6 +32,81 @@
     <style>
 
 
+        :root{
+
+            --color1: #000000;
+            --color2: #ffffff;
+            --color3: #ffffff89;
+            --color4: #FFBD3A;
+            --color5: #d7d7d7;
+            --color6: #1e1e1e;
+            --color7: #828282;
+            --color8: #222222;
+            --color9: #141414;
+            --color10: #ffbd3a4d;
+            --color11: #a3a3a3;
+            --color12: #000d1c;
+            --color13: #808080;
+            --color14: #a1a1a1;
+            --color15: #55555580;
+            --color16: #ffbd381a;
+            --color17: #ffbd3866;
+            --color18: #333;
+            --color19: #000000cf;
+            --color20 : #ffbd3a8f;
+            --color21 : #ffbd3a1a;
+            --color22 : #0d1017;
+
+            --color25 : #0000008d;
+
+        }
+
+/*
+        :root{
+
+            --color1: #ffffff;
+            --color2: #000000;
+            --color3: #2b2b2b89;
+            --color4: #a33aff;
+            --color5: #353535;
+            --color6: #e4e4e4;
+            --color7: #828282;
+            --color8: #ebe9e9;
+            --color9: #f2f2f2;
+            --color10: #7c3aff4d;
+            --color11: #676767;
+            --color12: #d7dfde;
+            --color13: #808080;
+            --color14: #737373;
+            --color15: #adadad80;
+            --color16: #e9e1f41a;
+            --color17: #ac38ff66;
+            --color18: #d3d3d3;
+            --color19: #fafafacf;
+            --color20 : #8f3aff8f;
+            --color21 : #8c3aff1a;
+            --color22 : #0D1017;
+
+            --color25 : #ffffff8d;
+
+        }
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         input[type="number"]::-webkit-inner-spin-button,
         input[type="number"]::-webkit-outer-spin-button,
@@ -43,28 +118,28 @@
         }
 
         /* For WebKit-based browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 6px; /* Width of the entire scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background:linear-gradient(#151515,black); /* Track (background) color */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #ffbd3a33; /* Thumb (scroll bar) color */
-     /* Rounded corners */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Change color on hover */
-  }
+        ::-webkit-scrollbar {
+            width: 6px; /* Width of the entire scrollbar */
+        }
+        
+        ::-webkit-scrollbar-track {
+            background:linear-gradient(var(--color9),var(--color1)); /* Track (background) color */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--color10); /* Thumb (scroll bar) color */
+            /* Rounded corners */
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color15); /* Change color on hover */
+        }
   
   /* For Firefox */
   /* Firefox allows you to style scroll bars using "scrollbar-color" and "scrollbar-width" */
   /* The following example sets the color and width for both the thumb and the track */
   * {
-        scrollbar-color: #888 #f1f1f1;
+        scrollbar-color: var(--color7) var(--color5);
         scrollbar-width: thin;
     }
     
@@ -78,48 +153,48 @@
         }
 
         body{
-            background-color: #000000;
+            background-color: var(--color1);
         }
 
 
         a{
             text-decoration: none!important ;
-            color: white;
+            color: var(--color2);
 
         }
 
 
         .contact .con2 input{
-            background-color:rgba(255, 255, 255, 0.539);
+            background-color:var(--color3);
             /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
 
         }
         .contact .con2 textarea{
-            background-color:rgba(255, 255, 255, 0.539);
+            background-color:var(--color3);
             /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
 
         }
 
         .contact .con2 input:active{
-            background-color:rgb(255, 255, 255);
+            background-color:var(--color2);
         }
 
         .contact .con2 textarea:active{
-            background-color:rgb(255, 255, 255);
+            background-color:var(--color2);
         }
 
         .contact .con2 input:hover{
-            background-color:rgb(255, 255, 255);
+            background-color:var(--color2);
         }
 
 
         .contact .con2 textarea:hover{
-            background-color:rgb(255, 255, 255);
+            background-color:var(--color2);
         }
 
 
         .Navigation-bar{
-            color : white;
+            color : var(--color2);
             position: fixed;
             width: 100%;
             z-index: 99999;
@@ -177,13 +252,13 @@
           
           .menu-text ul li:hover::after {
             transform: scaleX(1);
-            background-color: #FFBD3A;
+            background-color: var(--color4);
             
           }
           
 
         .menu-text ul li:hover a{
-            color:#FFBD3A;
+            color:var(--color4);
         }
 
 
@@ -194,7 +269,7 @@
 
         .main-text p{
             padding-top: 15px;
-            color:#d7d7d7;
+            color:var(--color5);
             font-size: 13px;
         }
 
@@ -202,18 +277,18 @@
             font-size: 50px;
             text-transform: capitalize;
             font-weight: 900;
-            color:white;
+            color:var(--color2);
            
         }
 
         .main-text span{
-            color:#FFBD3A;
+            color:var(--color4);
         }
 
 
 
         .main{
-            background-color: #000000;
+            background-color: var(--color1);
             padding-top: 50px;
            
         }
@@ -228,9 +303,9 @@
 
 
         .button1{
-            background-color: #FFBD3A;
-            color: #000000;
-            border : 1px solid #FFBD3A;
+            background-color: var(--color4);
+            color: var(--color1);
+            border : 1px solid var(--color4);
             padding: 10px;
             margin-right: 20px;
             text-transform: uppercase;
@@ -241,15 +316,15 @@
         }
 
         .button1:hover{
-            background-color: transparent;
-            border : 1px solid #1e1e1e;
-            color: white;
+            background-color: var(--color4);
+            border : 1px solid var(--color6);
+            color: var(--color1);
         }
 
         .button2{
             background-color: transparent;
-            border : 1px solid #1e1e1e;
-            color: #ffffff;
+            border : 1px solid var(--color6);
+            color: var(--color2);
             padding: 10px;
             margin-right: 20px;
             text-transform: uppercase;
@@ -260,9 +335,9 @@
         }
 
         .button2:hover{
-            border : 1px solid #FFBD3A;
-            background-color: #FFBD3A;
-            color:black;
+            border : 1px solid var(--color4);
+            background-color: var(--color4);
+            color:var(--color1);
         }
 
        
@@ -276,7 +351,7 @@
 
 
         .about{
-            background-color:#000000;
+            background-color:var(--color1);
             z-index: 9999;
             clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
         }
@@ -290,14 +365,14 @@
         }
 
         .head-text .text{
-            color: white;
+            color: var(--color2);
             font-weight: 800;
             letter-spacing: 3px;
             font-size: 30px;
         }
 
         .head-text .shadow{
-            color: white;
+            color: var(--color2);
             letter-spacing: 3px;
             font-size: 55px;
             font-weight: 900;
@@ -310,30 +385,30 @@
         
 
         .head-text .decription{
-            color: white;
+            color: var(--color2);
             font-size: 13px;
             position: relative;
             top : -35px;
-            color: #828282;
+            color: var(--color7);
         }
 
         .about-text{
             padding-left: 20%;
-            color: #828282;
+            color: var(--color7);
         }
 
         .about-text .bold-about{
             font-weight: 500;
-            color :white;
+            color :var(--color2);
         }
 
         .about-text span{
-            color: #FFBD3A;
+            color: var(--color4);
             font-weight: 700;
         }
 
         .about-text p{
-            color: white;
+            color: var(--color2);
             font-size: 19px;
         }
 
@@ -344,12 +419,12 @@
         
 
         .services{
-            background-color: #000000;
+            background-color: var(--color1);
         }
 
         /*.cardd{
             padding: 30px;
-            background-color: #222222;
+            background-color: var(--color8);
             margin: 10px;
             border: none;
             border-radius : 0px;
@@ -357,7 +432,7 @@
         }*/
 
         .cardd{
-            background-color: #222222;
+            background-color: var(--color8);
             border: none;
             border-radius : 0px;
             height:150px;
@@ -376,7 +451,7 @@
 
         .carddd i{
             font-size: 40px;
-            color: #FFBD3A;
+            color: var(--color4);
             padding: 20px;
             
         }
@@ -388,7 +463,7 @@
 
 
         .carddd  p{
-            color: white;
+            color: var(--color2);
 
         }
 
@@ -418,13 +493,13 @@
           
           .carddd p:hover::after{
             transform: scaleX(1);
-            background-color: #FFBD3A;
+            background-color: var(--color4);
             
           }
           
 
           .carddd p:hover a{
-            color:rgb(255, 189, 58);
+            color:var(--color4);
         }
 
 
@@ -440,12 +515,12 @@
 
         @keyframes boxstyle {
             0% {
-                background-color: #1e1e1e;
+                background-color: var(--color6);
                 clip-path: circle(15.0% at 1% 100%);
             }
            
             100% {
-                background-color: #1e1e1e;
+                background-color: var(--color6);
                 clip-path: circle(140.4% at 1% 100%);
             }
           }
@@ -453,7 +528,7 @@
 
 
         .whychooseme{
-            background-color: rgb(20,20,20);
+            background-color: var(--color9);
             clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
             padding-bottom: 150px;
             padding-top: 70px;
@@ -469,8 +544,8 @@
         }
 
         .ourproject .container1{
-            border-left: 5px solid rgba(255, 189, 58, 0.3) ;
-            border-right: 5px solid rgba(255, 189, 58, 0.3) ;
+            border-left: 5px solid var(--color10) ;
+            border-right: 5px solid var(--color10) ;
             margin : 50px;
         }
     
@@ -538,29 +613,29 @@
                 transition: ease-in-out ;
                 transition-duration: 0.3s;
                 height: 100%;
-                background-color: #000000;
+                background-color: var(--color1);
             }
     
             .ourproject  .project-detail h2{
-                color:#d7d7d7;
+                color:var(--color5);
                 font-size: 25px;
             }
     
             .ourproject  .project-detail p{
-                color:#a3a3a3;
+                color:var(--color11);
                 font-size: 13px;
             }
     
             .ourblog{
-                background-color:#000d1c;
-                padding-top: 50px;;
+                background-color:var(--color12);
+                padding-top: 50px;
                 padding-bottom: 150px; 
                 clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
             }
     
     
             .ourblog .card{
-                background-color: #141414;
+                background-color: var(--color9);
                 
             }
     
@@ -576,12 +651,12 @@
             }
     
             .ourblog .texttt p{
-                color:#969696;
+                color:var(--color13);
                 font-size: 14px;
             }
     
             .ourblog .texttt .date{
-                color:#FFBD3A;
+                color:var(--color4);
                 font-weight: 600;
                 font-size: 13px;
             }
@@ -589,7 +664,7 @@
 
             .contact{
 
-                background-color:gray;
+                background-color:var(--color13);
 
 
             }
@@ -598,13 +673,13 @@
                 padding: 30px;
                 margin: 10px;
                 font-size:27px ;
-                color:#FFBD3A;
+                color:var(--color4);
                 overflow: hidden;
                 transition: all 0.3s ease-in-out;
                 width: 40px;
                 position: relative;
                 left:35%;
-                background-color: #1e1e1e;
+                background-color: var(--color6);
                 border-radius: 10px;
 
             }
@@ -618,7 +693,7 @@
                 position: relative;
                 top: -53px;
                 font-size:27px;
-                color:#FFBD3A;
+                color:var(--color4);
                
                 
             }
@@ -626,12 +701,12 @@
 
             @keyframes buttonScale {
                 0% {
-                    background-color: #1e1e1e;
+                    background-color: var(--color6);
                     clip-path: circle(15.0% at 1% 100%);
                 }
                
                 100% {
-                    background-color: #1e1e1e;
+                    background-color: var(--color6);
                     clip-path: circle(140.4% at 1% 100%);
                 }
               }
@@ -642,27 +717,27 @@
 
 
             .contact h5{
-                color: white;
+                color: var(--color2);
                 padding: 5px;
                 font-size: 20px;
                 font-weight: 400;
             }
             .contact p{
-                color:#a1a1a1;
+                color:var(--color14);
             }
 
             .footer p{
-                color: #a1a1a1;
+                color: var(--color14);
                 font-size: 13px;
             }
 
             .footer h3{
-                color : white;
+                color : var(--color2);
 
             }
 
             .footer li{
-                color: #a1a1a1;
+                color: var(--color14);
                 list-style:square;
                 padding-bottom:10px;
 
@@ -670,13 +745,13 @@
 
 
             .footer i{
-                color:#FFBD3A;
+                color:var(--color4);
                 font-size: 20px;
             }
             
             
             .footer div{
-                color: #a1a1a1;
+                color: var(--color14);
             }
 
             .social-icon{
@@ -685,10 +760,10 @@
 
             .social-icon i{
                 padding: 15px;
-                background-color:#222222;
+                background-color:var(--color8);
                 font-size: 20px;
                 border-radius: 50%;
-                color: #FFBD3A;
+                color: var(--color4);
             }
 
 
@@ -698,7 +773,7 @@
 
             .whatapppopup{
                 bottom :20%;
-                background-color:#222222;
+                background-color:var(--color8);
                 position:fixed;
                 z-index: 9999999999;
                 padding: 20px;
@@ -714,7 +789,7 @@
             }
 
             .whatapppopup p{
-                color: #ffffff;
+                color: var(--color2);
                 display: block;
                 transform: rotate(90deg);
                 position: relative;
@@ -766,8 +841,8 @@
                 transform: translate(-50%, -50%);
                 width: 50%;
                 height: auto;
-                background-color: rgba(0, 0, 0, 0.813);
-                background:linear-gradient(rgb(72, 72, 72),rgb(36, 36, 36));
+                background-color: var(--color19);
+                background:linear-gradient(var(--color15),var(--color8));
                 border-radius: 10px;
                 overflow: hidden;
 
@@ -895,7 +970,7 @@
 
             .main-text p{
                 padding-top:10px ;
-                color:#d0d0d0;
+                color:var(--color14);
             }
 
             #mobile-menu{
@@ -935,7 +1010,7 @@
                 padding: 0;
                 width: 100%;
                 height: 100vh;
-                background-color: #00000090;
+                background-color: var(--color1)90;
                 transition: ease-in-out;
                 transition-duration: 0.4s;
             }
@@ -964,7 +1039,7 @@
                 position: fixed;
                 width: 50%;
                 height: 100vh;
-                background-color: #222222 ;
+                background-color: var(--color8) ;
                 text-align: left;
                 transition: ease-in-out;
                 transition-duration: 0.4s;
@@ -988,11 +1063,11 @@
 
            
             .menu-text ul li:hover{
-                background-color: #FFBD3A;
+                background-color: var(--color4);
             }
  
             .menu-text ul li:hover a{
-                color: black;
+                color: var(--color1);
 
             }
            
@@ -1012,7 +1087,7 @@
         }
 
         .freelancer .card{
-            background-color: #141414;
+            background-color: var(--color9);
             position: relative;
             top:-70px;
             padding: 20px;
@@ -1023,44 +1098,44 @@
         }
 
         .freelancer .card h2{
-            color:#FFBD3A;
+            color:var(--color4);
 
         }
 
         .freelancer .text h2{
-            color: #d0d0d0;
+            color: var(--color14);
             font-weight: 700;
         }
 
         .freelancer .text span{
-            color:#FFBD3A;
+            color:var(--color4);
         }
 
         .freelancer .text p{
-            color:#c5c5c5;
+            color:var(--color13);
         }
 
 
         .freelancer .card h2{
-            color:#FFBD3A;
+            color:var(--color4);
             font-weight: 700;
         }
 
         .freelancer .card p{
-            color: rgb(158, 158, 158);
+            color: var(--color13);
         }
         
 
         .contact{
 
-            background-color: #000000;
+            background-color: var(--color1);
             position:relative;
 
 
         }
 
         .contact .con1{
-            background-color: #222222;
+            background-color: var(--color8);
             overflow:hidden;
             /*clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);*/
         }
@@ -1076,7 +1151,7 @@
 
 
         .contact .con2{
-            background-color: #55555580;
+            background-color: var(--color15);
             /*clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);*/
 
         }
@@ -1084,21 +1159,21 @@
        
 
         .contact .con2 h4{
-            color:white;
+            color:var(--color2);
         }
 
         .footer{
-            background-color: #000000;
+            background-color: var(--color1);
         }
 
         .contact p{
-            color : white;
+            color : var(--color2);
         }
 
 
         .about-text .f{
-            background-color:#FFBD3A;
-            color:white;
+            background-color:var(--color4);
+            color:var(--color2);
             padding: 5px;
             margin-bottom:15px;
             box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -1111,8 +1186,8 @@
         .about-text .s{
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            background-color:rgba(255, 189, 56, 0.100);
-            color:white;
+            background-color:var(--color16);
+            color:var(--color2);
             padding: 5px;
             margin-bottom:15px;
             transition: ease;
@@ -1124,7 +1199,7 @@
 
 
         .about-text .s:hover{
-            background-color: rgba(255, 189, 56, 0.400);
+            background-color: var(--color17);
 
         }
 
@@ -1132,7 +1207,7 @@
         
 
         .boxxx{
-            border : 1px solid rgb(71, 71, 71);
+            border : 1px solid var(--color6);
             padding: 25px;
             margin-bottom: 20px;
             transition: ease-in-out;
@@ -1141,7 +1216,7 @@
 
         .boxxx h4{
 
-            color: white;
+            color: var(--color2);
             height: 50px;
             transition: ease-in-out;
             transition-duration: 0.3s;
@@ -1153,7 +1228,7 @@
 
 
         .boxxx p{
-            color: #9a9a9a;
+            color: var(--color14);
             font-size: 13px;
             height: 7 px;
             padding-top: 10px;
@@ -1170,14 +1245,14 @@
         .boxxx i{
             font-size: 40px;
             padding-bottom: 20px;
-            color: #FFBD3A;
+            color: var(--color4);
             transition: ease-in-out;
             transition-duration: 0.3s;
             
         }
 
         .boxxx:hover a{
-            color: #FFBD3A;
+            color: var(--color4);
         }
 
             
@@ -1190,30 +1265,30 @@
         
 
         .boxxx:hover{
-            background-color:black;
-            border: #000000 1px solid;
+            background-color:var(--color1);
+            border: var(--color1) 1px solid;
         }
         .boxxx:hover h4{
-            color:#FFBD3A;
+            color:var(--color4);
         }
         .boxxx:hover p{
-            color: white;
+            color: var(--color2);
         }
 
         .boxxx:hover i{
-            color: white;
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            color: var(--color2);
+          
         }
 
         .copyright{
-            background: linear-gradient(to right, #ffbd3a72,#000000);
+            background: linear-gradient(to right, var(--color4)72,var(--color1));
 
         }
 
         .button2{
             padding: 10px;
-            background-color:#555;
-            color : black;
+            background-color:var(--color13);
+            color : var(--color1);
             border-radius: 0px;
             
         }
@@ -1225,7 +1300,7 @@
             position:fixed;
             left: 0px;
             bottom: 50%;
-            background-color: #1e1e1e;
+            background-color: var(--color6);
             padding: 10px;
             opacity: 0.3;
             z-index: 99;
@@ -1235,7 +1310,7 @@
         }
 
         .setting i{
-            color: white;
+            color: var(--color2);
             font-size: 25px;
             animation: setting-rotate 5s infinite ;
             
@@ -1244,7 +1319,7 @@
 
         .setting:hover i{
             animation: setting-rotate 1s infinite ;
-            color: #FFBD3A;
+            color: var(--color4);
             
         }
         .setting:hover{
@@ -1266,13 +1341,13 @@
             position: fixed;
             width: 290px;
             padding: 10px;
-            border : 1px solid gray;
+            border : 1px solid var(--color13);
             left: -290px;
             top: 35%;
             text-align: center;
             transition: ease-in;
             transition-duration: 0.5s;
-            background-color: #000000;
+            background-color: var(--color1);
         }
 
         .social-media i{
@@ -1280,11 +1355,11 @@
         }
 
         a:hover{
-            color :white;
+            color :var(--color2);
         }
 
         .close{
-            color:white;
+            color:var(--color2);
             position: absolute;
             right: 30px;
             top:20px;
@@ -1296,18 +1371,18 @@
         }
 
         .close:hover{
-            color:#FFBD3A;
+            color:var(--color4);
         }
 
         .popupcontents{
           
         }
         .popupcontents h3{
-            color: white;
+            color: var(--color2);
         }
 
         .popupcontents p{
-            color:rgb(255, 255, 255);
+            color:var(--color2);
             font-size: 13px;
         }
 
@@ -1322,8 +1397,8 @@
         .popupcontents input:focus{
             background-color: transparent;
             box-shadow: none;
-            color: #d4d4d4;
-            border-color: #FFBD3A;
+            color: var(--color5);
+            border-color: var(--color4);
 
         }
 
@@ -1332,7 +1407,7 @@
             padding: 6px;
             border: none;
             font-weight: 700;
-            color : rgb(42, 42, 42);
+            color : var(--color8);
             border-radius: 30px;
             padding-left: 10px;
             padding-right:10px ;
@@ -1340,7 +1415,7 @@
         }
 
         .popupcontents button:hover{
-            background: #FFBD3A;
+            background: var(--color4);
         }
 
         .leftpopupbox{
@@ -1360,7 +1435,7 @@
         .rightpopupbox span{
             font-weight: 700;
             font-size: 35px;
-            color: #FFBD3A;
+            color: var(--color4);
         }
 
         .smmm{
@@ -1376,15 +1451,18 @@
             padding: 10px;
         }
 
+        
+
+
         .weel {
             position: relative;
             width: 350px;
             height: 350px;
             border-radius: 50%;
             animation: rotateCircle 50s linear infinite;
-            background-color: rgba(255, 189, 58, 0.56);
-            box-shadow: rgba(255, 189, 58, 0.1) 0px 8px 24px, rgba(255, 189, 58, 0.1) 0px 16px 56px, rgba(255, 189, 58, 0.1) 0px 24px 80px;
-            box-shadow: rgba(255, 189, 58, 0.56) 0px 0px 200px 50px;
+            background-color: var(--color20);
+            box-shadow: var(--color21) 0px 8px 24px, var(--color21) 0px 16px 56px, var(--color21) 0px 24px 80px;
+            box-shadow: var(--color20) 0px 0px 200px 50px;
             z-index: -1;
             
           }
@@ -1420,7 +1498,7 @@
           .number {
             position: absolute;
             font-size: 14px;
-            color: #333;
+            color: var(--color18);
           }
           
        
@@ -1472,7 +1550,7 @@
     
           .weel i{
             font-size: 35px;
-            color: #FFBD3A;
+            color: var(--color4);
           }
 
 
@@ -1486,7 +1564,7 @@
 
 
         .blog-main{
-            background-color: #000000;
+            background-color: var(--color1);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -1495,8 +1573,8 @@
 
 
         .code-box{
-            background-color:#2121218e;
-            border: 1px solid rgb(72, 72, 72);
+            background-color:var(--color6);
+            border: 1px solid var(--color15);
             padding: 50px;
             border-radius: 20px;
 
@@ -1505,10 +1583,10 @@
         }
 
         .code-box code{
-            color :rgb(136, 136, 136);
+            color :var(--color14);
         }
         .code-box h3{
-            color:#FFBD3A;
+            color:var(--color4);
         }
 
         .main-text{
@@ -1516,7 +1594,7 @@
         }
 
         .blog-main h1{
-            color:#878787;
+            color:var(--color14);
             width: 70%;
         }
 
@@ -1526,7 +1604,7 @@
             margin-left: 15%;
             font-weight: 700;
             font-size: 18px;
-            color:#555;
+            color:var(--color13);
 
         }
         .main-image .ffff{
@@ -1535,7 +1613,7 @@
             font-size: 40px;
             margin-left: 25% ;
             animation: jump 1s ease infinite;
-            color: #a1a1a1;
+            color: var(--color14);
             padding: 20px;
             border-radius: 50%;
         }
@@ -1555,7 +1633,7 @@
 
           .main-image .ffff:hover{
             animation: none;
-            color :#FFBD3A;
+            color :var(--color4);
             transition: 1s;
 
 
@@ -1565,14 +1643,14 @@
         .ppost{
 
 
-            color : rgb(179, 179, 179);
+            color : var(--color11);
 
         }
 
 
 
         .blog{
-            background-color: #151515;
+            background-color: var(--color9);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
             padding-bottom : 100px;
@@ -1584,7 +1662,7 @@
 
 
         h2{
-            color: #ffffff;
+            color: var(--color2);
             margin-bottom: 10px;
             margin-top: 30px;
         }
@@ -1592,7 +1670,7 @@
 
         .sidebar{
 
-            background-image: linear-gradient(to right, rgb(26, 26, 26), #151515);
+            background-image: linear-gradient(to right, var(--color8), var(--color9));
             height: auto;
             padding-top: 80px;
             padding-bottom:140px ;
@@ -1602,7 +1680,7 @@
 
 
         code{
-            color :#FFBD3A;
+            color :var(--color4);
         }
 
         .immg{
@@ -1610,19 +1688,19 @@
         }
 
         .ttle{
-            color :#888888;
+            color :var(--color14);
             font-size: 15px;
         }
 
         .ttle:hover{
-            color: #FFBD3A;
+            color: var(--color4);
             transition: ease-in-out;
             transition-duration: 0.5s;
             cursor: pointer;
         }
 
         .sidebar h3{
-            color: white;
+            color: var(--color2);
         }
 
 
@@ -1656,7 +1734,7 @@
 }
 
 a:hover{
-    color: #FFBD3A;
+    color: var(--color4);
 
 }
 
@@ -1666,19 +1744,19 @@ a:hover{
 
 .home-active{
 
-    color : #FFBD3A;
+    color : var(--color4);
 }
 .blog-active{
 
-    color : white;
+    color : var(--color2);
 }
 .about-active{
 
-    color : white;
+    color : var(--color2);
 }
 .contact-active{
 
-    color : white;
+    color : var(--color2);
 }
 
 
@@ -1687,19 +1765,19 @@ a:hover{
 
     position :fixed;
     width : 35%;
-    color: white;
+    color: var(--color2);
     top : 12%;
-    left:50%;
+    left:40%;
     z-index : 999999;
     padding : 20px;
-    background-color:rgba(0, 0, 0, 0.553);
+    background-color:var(--color25);
     clip-path: circle(0% at 50% 50%);
     transition-delay :0.3s;
 
 }
 
 .blognav .dropdownbox a{
-    color: white;
+    color: var(--color2);
     padding-top: 10px;
 }
 
@@ -1707,18 +1785,19 @@ a:hover{
 
 
 .blognav:hover .dropdownbox a{
-    color: white;
+    color: var(--color2);
 }
 
 
 .blognav:hover .dropdownbox{
-    background-color:rgb(0, 0, 0);
+    background-color:var(--color1);
     clip-path: circle(100% at 50% 50%);
+    border : 1px solid var(--color20);
 
 }
 
 .blognav .dropdownbox a:hover{
-    color:#FFBD3A;
+    color:var(--color4);
 }
 
 .con2{
@@ -1726,7 +1805,7 @@ a:hover{
 }
 
 .contact .con1{
-    background-color : rgb(13,16,23);
+    background-color : var(--color22);
 }
 
 #mob{
@@ -1749,7 +1828,7 @@ a:hover{
 
 
 #preloader{
-    background : #1C213B url({% static 'loader.gif' %}) no-repeat center center;
+    background : #1C213B url("{% static 'loader.gif' %}") no-repeat center center;
     background-size : 20%;
     height: 100vh;
     width : 100%;
@@ -1765,7 +1844,7 @@ a:hover{
 
     #preloader{
 
-    background : #1C213B url({% static 'loader.gif' %}) no-repeat center center;
+    background : #1C213B url("{% static 'loader.gif' %}") no-repeat center center;
     background-size : 80%;
     height: 100vh;
     width : 100%;
@@ -1783,7 +1862,7 @@ a:hover{
     }
 
     .blognav:hover .dropdownbox {
-        background-color: rgb(0, 0, 0);
+        background-color: var(--color1);
         clip-path: circle(100% at 50% 50%);
         margin-top: 40%;
     }
@@ -1824,30 +1903,12 @@ a:hover{
 
 }
 
-
-
-
-
-
-
-
-
-
 </style>
-
-
-
-
 </head>
-
-
-
 <body>
 
 
-<div id="preloader">
-
-</div>
+<div id="preloader"></div>
 
 
 
@@ -1897,12 +1958,6 @@ a:hover{
 
 
 
-
-    
-
-
-
-
     <div class="social-media">
         <div class="row">
             <div class="col-4">
@@ -1934,21 +1989,11 @@ a:hover{
 
 
 
-
-
-
     <div class="setting" id="setting">
         <i class="fa-solid fa-gear setting-icon" ></i>
         
     </div>
 
-    
-
-
-
-
-
-    
 
     <section class="whatapppopup">
 
@@ -2057,12 +2102,13 @@ a:hover{
                               </div>
                             </div>
                           </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+
 
 
 
@@ -2074,7 +2120,7 @@ a:hover{
                 <div class="col-md-12 col-lg-6 col-sm-12 mt-5">
                     <br><br>
                     <a href="https://www.linkedin.com/in/codeaj/">
-                        <img src="{% static 'linkedin1.jpg' %}" class="img-fluid " style="margin-top: 130px;" alt="linkedin">
+                        <img src="{% static 'linkedin2.png' %}" class="img-fluid " style="margin-top: 130px;" alt="linkedin">
                     </a> 
 
                     <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="codeaj" data-version="v1">
@@ -2513,8 +2559,8 @@ a:hover{
 
         <div class="text text-center">
 
-            <h2>I'm <span>Avilable</span> for freelancing</h2>
-            <p>
+            <h2 style="color: white;">I'm <span>Avilable</span> for freelancing</h2>
+            <p style="color: white;">
                 I am a highly motivated and experienced web developer with over 5 years of experience <br> in developing websites. My expertise includes HTML, CSS,JS,Python.
             </p>
 
@@ -2560,7 +2606,7 @@ a:hover{
                     
                         <h5>ADDRESS</h5>
                         <p>
-                            Upkar Layout, Whitefield, Bengaluru, Karnataka 560066
+                            Upkar Layout, Whiteield, Bengaluru, Karnataka 560066
                         </p>
 
                     </a>
@@ -2699,7 +2745,7 @@ a:hover{
 
         <div class="row">
             <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" width="180px" alt="Logo"></a>
+                <a href="{% url 'home' %}"><img src="{% static 'codeaj1.png' %}" width="180px" alt="Logo"></a>
                 <p>
                     Expert Python Django Full Stack Developer | Flutter Mobile App Developer | Building Next-Gen Solutions
                 </p>
@@ -2842,7 +2888,7 @@ a:hover{
         </div>
     </div>
 
-    <div class="col-12  text-center p-4 copyright">
+    <div class="col-12  text-center p-4 copyright" style="background-color:var(--color10)">
         Copyright &#169;2023 All right reserved | <a href="{% url 'privacy-policy' %}">Privacy Policy</a>
     </div> 
 
@@ -3063,9 +3109,9 @@ a:hover{
             const navbar = $('#navbar');
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 50) {
-                    navbar.css('background-color', '#141414');
+                    navbar.css('background-color', 'var(--color9)');
                 } else {
-                    navbar.css('background-color', 'black');
+                    navbar.css('background-color', 'var(--color1)');
                 }
             });
 
