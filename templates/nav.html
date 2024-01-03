@@ -349,11 +349,22 @@
 
 
         const checkbox = document.getElementById('lightdark');
-    const root = document.documentElement;
+const root = document.documentElement;
+const storedTheme = localStorage.getItem('theme');
 
-    checkbox.addEventListener('change', function() {
-      if (this.checked) {
-       
+// Function to set the theme
+function setTheme(theme) {
+  if (theme === 'dark') {
+    checkbox.checked = true;
+    applyDarkMode();
+  } else {
+    checkbox.checked = false;
+    applyLightMode();
+  }
+}
+
+// Function to apply dark mode colors
+function applyDarkMode() {
         root.style.setProperty('--color1', '#ffffff');
         root.style.setProperty('--color2', '#000000');
         root.style.setProperty('--color3', '#2b2b2b89');
@@ -377,34 +388,54 @@
         root.style.setProperty('--color21', '#8c3aff1a');
         root.style.setProperty('--color22', '#0D1017');
         root.style.setProperty('--color25', '#ffffff8d');
-      } else {
-        // Change CSS variables to the first set of colors
-        root.style.setProperty('--color1', '#000000');
-        root.style.setProperty('--color2', '#ffffff');
-        root.style.setProperty('--color3', '#ffffff89');
-        root.style.setProperty('--color4', '#FFBD3A');
-        root.style.setProperty('--color5', '#d7d7d7');
-        root.style.setProperty('--color6', '#1e1e1e');
-        root.style.setProperty('--color7', '#828282');
-        root.style.setProperty('--color8', '#222222');
-        root.style.setProperty('--color9', '#141414');
-        root.style.setProperty('--color10', '#ffbd3a4d');
-        root.style.setProperty('--color11', '#a3a3a3');
-        root.style.setProperty('--color12', '#000d1c');
-        root.style.setProperty('--color13', '#808080');
-        root.style.setProperty('--color14', '#a1a1a1');
-        root.style.setProperty('--color15', '#55555580');
-        root.style.setProperty('--color16', '#ffbd381a');
-        root.style.setProperty('--color17', '#ffbd3866');
-        root.style.setProperty('--color18', '#333');
-        root.style.setProperty('--color19', '#000000cf');
-        root.style.setProperty('--color20', '#ffbd3a8f');
-        root.style.setProperty('--color21', '#ffbd3a1a');
-        root.style.setProperty('--color22', '#0d1017');
-        root.style.setProperty('--color25', '#0000008d');
-      }
-    });
+}
 
+// Function to apply light mode colors
+function applyLightMode() {
+    root.style.setProperty('--color1', '#000000');
+    root.style.setProperty('--color2', '#ffffff');
+    root.style.setProperty('--color3', '#ffffff89');
+    root.style.setProperty('--color4', '#FFBD3A');
+    root.style.setProperty('--color5', '#d7d7d7');
+    root.style.setProperty('--color6', '#1e1e1e');
+    root.style.setProperty('--color7', '#828282');
+    root.style.setProperty('--color8', '#222222');
+    root.style.setProperty('--color9', '#141414');
+    root.style.setProperty('--color10', '#ffbd3a4d');
+    root.style.setProperty('--color11', '#a3a3a3');
+    root.style.setProperty('--color12', '#000d1c');
+    root.style.setProperty('--color13', '#808080');
+    root.style.setProperty('--color14', '#a1a1a1');
+    root.style.setProperty('--color15', '#55555580');
+    root.style.setProperty('--color16', '#ffbd381a');
+    root.style.setProperty('--color17', '#ffbd3866');
+    root.style.setProperty('--color18', '#333');
+    root.style.setProperty('--color19', '#000000cf');
+    root.style.setProperty('--color20', '#ffbd3a8f');
+    root.style.setProperty('--color21', '#ffbd3a1a');
+    root.style.setProperty('--color22', '#0d1017');
+    root.style.setProperty('--color25', '#0000008d');
+  // Add the rest of your light mode color properties here
+}
+
+// Check if a theme is stored and apply it
+if (storedTheme) {
+  setTheme(storedTheme);
+} else {
+  // Default to light mode if no theme is stored
+  applyLightMode();
+}
+
+// Event listener for theme change
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    applyDarkMode();
+    localStorage.setItem('theme', 'dark');
+  } else {
+    applyLightMode();
+    localStorage.setItem('theme', 'light');
+  }
+});
 
 
 
